@@ -1,0 +1,53 @@
+@import 'tailwindcss';
+
+/* ---------------------------------------------------- */
+/* DESKTOP TOOLBOX STYLES (Used by Products, Solutions, Resources Toolboxes) */
+/* ---------------------------------------------------- */
+
+/* Styles for the section titles (e.g., 'Frameworks', 'Users', 'Tools') */
+.nav-toolbox .section-title {
+    /* Sets text size to small and applies a muted gray color variable */
+    @apply text-sm text-(--color-gray-500);
+}
+
+/* Base container for the list of tool items */
+.nav-toolbox .tools-container {
+    /* Adds top margin to separate the list from the section title */
+    @apply mt-6 space-y-4;
+    
+}
+
+/* Title text (the <h6> element) of the individual tool item */
+.nav-toolbox .tools-container .tool-title {
+    @apply text-sm;
+}
+
+/* Description text (the <p> element) of the individual tool item */
+.nav-toolbox .tools-container .tool-item .tool-description {
+    /* Sets text to a muted gray and extra small size */
+    @apply text-(--color-gray-500) text-xs;
+}
+
+/* Base style for the individual tool item (the <a> or <div> wrapper) */
+.nav-toolbox .tools-container .tool-item {
+    /* Uses flex to align icon and text horizontally, and adds spacing */
+    @apply flex items-center gap-4 cursor-pointer;
+}
+
+/* Style for the icon background/wrapper */
+.nav-toolbox .tools-container .tool-item .tool-icon-container {
+    /* Adds padding, sets dark background, applies guide border, and rounds corners */
+    @apply p-2 bg-(--color-black-900) border border-(--guide-color) rounded-md;
+}
+
+/* HOVER EFFECT: Changes the icon container appearance when the entire tool item is hovered */
+.nav-toolbox .tools-container .tool-item:hover .tool-icon-container {
+    /* Smooth transition duration is inherited. Changes background to light gray and text to black. */
+    @apply duration-200 bg-(--color-gray-100) text-black;
+}
+
+/* HOVER EFFECT: Changes the description text color when the entire tool item is hovered */
+.nav-toolbox .tools-container .tool-item:hover .tool-description {
+    /* Changes the description text color to white/light gray on hover */
+    @apply duration-200 text-(--color-gray-100);
+}

@@ -1,0 +1,83 @@
+.gauge-circle {
+    /* --- Animation and Timing Variables --- */
+    --transition-length: 1s; /* Duration for stroke and transform animations */
+    --transition-step: 0.2s; /* Additional timing variable (not used in the current arcs, but available) */
+    --delay: 0s; /* Delay before animation starts */
+
+    /* --- Calculation Variables --- */
+    --percent-to-deg: 3.6deg; /* Conversion: 360 degrees / 100 percent */
+
+    /* --- Layout and Positioning --- */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    transform: translateZ(
+        0
+    ); /* Promotes the element to its own layer for smooth animation */
+}
+
+/* --- Secondary Arc (Track or Baseline) --- */
+.gauge-arcSecondary {
+    /* Calculates the inverse of the offset factor for positional math */
+    --offset-factor-secondary: calc(1 - var(--offset-factor));
+
+    /* Sets the filled portion of the arc using: (Percentage * PixelsPerPercent) and then the total Circumference. */
+    stroke-dasharray: calc(var(--stroke-percent) * var(--percent-to-px))
+        var(--circumference);
+
+    /* --- Complex Rotation Logic --- */
+    transform: rotate(
+            calc(
+                /* Start near the top-left */ 360deg - 90deg -
+                    (
+                        /* Calculates and subtracts a gap between the two arcs */
+                            var(--gap-percent) * var(--percent-to-deg) *
+                            var(--offset-factor-secondary)
+                    )
+            )
+        )
+        scaleY(-1); /* Flips the arc vertically, a common technique for complex gauge arrangements */
+
+    /* Animates all properties over the defined time */
+    transition: all var(--transition-length) ease var(--delay);
+    /* Sets the center point for the rotation */
+    transform-origin: calc(var(--circle-size) / 2) calc(var(--circle-size) / 2);
+}
+
+/* --- Primary Arc (The Main Progress Indicator) --- */
+.gauge-arc {
+    /* Sets the filled portion of the arc, identical calculation to the secondary arc */
+    stroke-dasharray: calc(var(--stroke-percent) * var(--percent-to-px))
+        var(--circumference);
+
+    /* Defines a smooth transition for the animated properties */
+    transition: var(--transition-length) ease var(--delay),
+        stroke var(--transition-length) ease var(--delay);
+
+    /* Rotates the arc to the starting point */
+    transform: rotate(
+        calc(
+            /* Starts at the top (-90deg) */ -90deg + var(--gap-percent) * var(
+                    --offset-factor
+                ) * var(--percent-to-deg) /* Adds a small gap/offset */
+        )
+    );
+
+    /* Sets the center point for the rotation */
+    transform-origin: calc(var(--circle-size) / 2) calc(var(--circle-size) / 2);
+
+    /* Explicitly lists the properties to animate for performance and clarity */
+    transition-property: stroke-dasharray, transform;
+
+    /* Vendor Prefixes for older browsers (ensures animation works broadly) */
+    -webkit-transition: var(--transition-length) ease var(--delay),
+        stroke var(--transition-length) ease var(--delay);
+    -moz-transition: var(--transition-length) ease var(--delay),
+        stroke var(--transition-length) ease var(--delay);
+    -ms-transition: var(--transition-length) ease var(--delay),
+        stroke var(--transition-length) ease var(--delay);
+    -o-transition: var(--transition-length) ease var(--delay),
+        stroke var(--transition-length) ease var(--delay);
+}

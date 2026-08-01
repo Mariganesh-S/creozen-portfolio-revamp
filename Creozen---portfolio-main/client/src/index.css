@@ -1,0 +1,140 @@
+/* ======================================================================= */
+/* 1. IMPORTS & BASE CONFIGURATION */
+/* ======================================================================= */
+
+/* Import Vercel's custom font, Geist, from Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Geist:100,200,300,regular,500,600,700,800,900);
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* Import Tailwind CSS utilities */
+@import 'tailwindcss';
+
+/* ======================================================================= */
+/* 2. GLOBAL CSS VARIABLES (THEME & LAYOUT CONSTANTS) */
+/* ======================================================================= */
+
+:root {
+    /* --- BACKGROUNDS & PRIMARY COLORS --- */
+    --bg-primary: #000000; /* Main background color (Vercel Black) */
+
+    /* --- GRAYSCALE PALETTE (Based on Vercel's design system) --- */
+    --color-gray-50: #f9f9f9; /* White/very light gray */
+    --color-gray-100: #ededed;
+    --color-gray-200: #e2e2e2;
+    --color-gray-300: #cfcfcf;
+    --color-gray-400: #b1b1b1;
+    --color-gray-500: #a1a1a1; /* Secondary text/links */
+    --color-gray-600: #7a7a7a;
+    --color-gray-700: #5c5c5c;
+    --color-gray-800: #3d3d3d;
+    --color-gray-900: #1a1a1a; /* Dark gray elements/borders */
+
+    /* --- SPECIAL BLACKS/ACCENTS --- */
+    --color-black-600: #1f1f1f; /* Used for slightly lighter black elements */
+    --color-black-900: #0a0a0a; /* Deepest black */
+
+    /* --- ALPHA COLORS (Used for overlays and subtle effects) --- */
+    --color-gray-alpha-200: #ffffff24; /* White with 14% opacity (36/255) */
+    --color-gray-alpha-400: #ffffff17; /* White with 9% opacity (23/255) */
+    --ds-gray-alpha-600: rgb(
+        36,
+        36,
+        36
+    ); /* RGB value for a specific dark gray alpha */
+
+    /* --- BORDERS & GUIDES --- */
+    --border-color-primary: #1f1f1f; /* Primary dark border color */
+    --guide-color: #e5e7eb1a; /* Vercel's signature light guide line (approx. gray-200 with 10% opacity) */
+    --guide-width: 1px; /* Standard border width */
+
+    /* --- ACCENT COLORS --- */
+    --bg-red-accent: #e5484d;
+    --bg-blue-accent: #0090ff; /* Primary button/link blue */
+    --bg-green-accent: #0c9784;
+
+    /* --- SPACING CONSTANTS --- */
+    --padding-lg: 48px;
+    --padding-sm: 24px;
+    --content-width: 78%;
+    --content-max-width: 1300px;
+
+    /* --- CALCULATED TRIANGLE VALUES (For the unique header background geometry) --- */
+    /* NOTE: These values depend heavily on the viewport height and header size (64px) */
+    --calculated-triangle-width: calc(((100vh + 64px) / 8) * 2);
+    --calculated-triangle-vertical-position: calc((100vh - 64px) / 8);
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+/* ======================================================================= */
+/* 3. BASE STYLES & RESETS */
+/* ======================================================================= */
+
+* {
+    /* Global box-sizing reset for reliable layout calculations */
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+body {
+    /* Apply Vercel's custom font globally */
+    font-family: DM Sans, sans-serif;
+    /* Apply base colors from CSS variables */
+    background-color: var(--bg-primary);
+    color: var(--color-gray-200);
+}
+
+h1 {
+    /* Tightens spacing for large headings, matching Vercel's typography */
+    letter-spacing: -0.1rem;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+    /* Ensures body scrollbar space is removed */
+    padding-right: 15px;
+}
+
+::selection {
+    color: #1a1a1a;           /* Text color when selected */
+    background: #ededed;      /* Background color when selected */
+}
+
+/* For Firefox (uses a different pseudo-element) */
+::-moz-selection {
+    color: #1a1a1a;
+    background: #ededed;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-black-900);  /* Deep dark track */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-gray-700);   /* Medium-dark thumb */
+    border-radius: 10px;
+    border: 2px solid var(--color-black-900); /* Creates a "pill" effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-500);   /* Lighter on hover for visibility */
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-gray-700) var(--color-black-900);
+}
+
+/* Legacy IE / Edge */
+body {
+    -ms-overflow-style: none;
+}

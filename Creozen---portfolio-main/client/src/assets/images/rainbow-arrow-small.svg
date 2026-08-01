@@ -1,0 +1,29 @@
+<svg data-size="small" width="129" height="88" viewBox="0 0 129 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M4 4V28.5C4 35.1 9.37 40.5 16 40.5H116C122.6 40.5 128 45.9 128 52.5V88"
+    stroke="url(#paint0_linear_small)"
+    stroke-width="2"
+  />
+  <path
+    d="M4 4V28.5C4 35.1 9.37 40.5 16 40.5H116C122.6 40.5 128 45.9 128 52.5V88"
+    stroke="url(#paint1_linear_small)"
+    stroke-width="2"
+  />
+  <g clip-path="url(#clip0_small)">
+    <path d="M4 0.5L8 7.5H0L4 0.5Z" fill="#45DEC4"/>
+  </g>
+  <defs>
+    <linearGradient id="paint0_linear_small" x1="128" y1="40.5" x2="4" y2="40.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E5484D"/>
+      <stop offset="0.5" stop-color="#FFC634"/>
+      <stop offset="1" stop-color="#45DEC4"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_small" x1="128" y1="88" x2="128" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#000"/>
+      <stop offset="0.322" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip0_small">
+      <rect width="8" height="8" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>
