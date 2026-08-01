@@ -1,0 +1,48 @@
+/* --- HERO GRADIENT BACKGROUND EFFECT --- */
+/* Creates the colorful, conic gradient at the bottom of the hero section. */
+.hero-gradient-bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 85%;
+    z-index: -1;
+    border: transparent;
+
+    /* Define colors used in the conic gradient */
+    --yellow: #b398c4;
+    --red: #ad709b;
+    --blue: rgba(0, 89, 171, 0.8);
+    --cyan: rgba(173, 241, 255, 0.8);
+
+    /* Conic Gradient: Creates the central color splash effect */
+    background: conic-gradient(
+        from 180deg at 50% 70%,
+        transparent 0deg,
+        var(--blue) 72deg,
+        var(--cyan) 144deg,
+        var(--yellow) 216deg,
+        var(--red) 288deg,
+        transparent 360deg
+    );
+}
+
+/* Overlay that fades the conic gradient into the black background at the top */
+.hero-gradient-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: transparent;
+
+    /* Radial Gradient: Creates the mask that ensures the color is strongest at the bottom */
+    background: radial-gradient(
+        150% 150% at 50% 140%,
+        transparent 0%,
+        transparent 50%,
+        var(--bg-primary) 76%
+    );
+}
+
+

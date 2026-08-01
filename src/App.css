@@ -1,0 +1,13 @@
+@import 'tailwindcss'; 
+
+@theme {
+    --breakpoint-xs: 320px;
+}
+
+footer ul {
+    @apply space-y-3;
+}
+
+footer ul li:hover {
+    @apply text-white duration-200 cursor-pointer;
+}

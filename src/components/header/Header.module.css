@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+/* header styles */
+.header-btn-primary {
+    @apply px-3 py-1.5 border border-(--color-gray-alpha-200) rounded-md cursor-pointer
+        bg-(--color-black-900) hover:bg-(--color-gray-900) duration-200;
+}
+
+.header-btn-secondary {
+    @apply px-3 py-1.5 border rounded-md bg-(--color-gray-50) text-black cursor-pointer
+                hover:opacity-90 duration-200;
+}
+
+/* desktop nav styles */
+.desktop-nav ul li {
+    @apply px-3 py-2 rounded-full cursor-pointer leading-[1];
+}
+
+.desktop-nav ul li:hover {
+    @apply bg-(--color-black-600)  text-white;
+}
+
+/* ---------------------------------------------------------------- */
+/* SMALL SCREENS NAV STYLES (Mobile Menu)                           */
+/* ---------------------------------------------------------------- */
+
+/* Style for the main, top-level links (Products, Docs, Pricing, etc.) */
+.small-screens-nav ul li {
+    @apply px-3 py-3.5 rounded-md cursor-pointer hover:bg-(--color-gray-900) duration-200 hover:text-white;
+}
+
+.small-screens-nav .header-btn-primary {
+    @apply py-2.5;
+}
+.small-screens-nav .header-btn-secondary {
+    @apply py-2.5;
+}
+
+/* Style for the UL container of the collapsible sub-menus (Products, Solutions, Resources) */
+.small-screens-nav .sub-menu {
+    @apply text-sm px-2 flex flex-col gap-1;
+}
+.small-screens-nav .sub-menu > li {
+    @apply flex items-center gap-2 py-3 cursor-pointer transition-colors hover:text-white;
+}
