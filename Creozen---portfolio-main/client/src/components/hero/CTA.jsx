@@ -8,7 +8,21 @@ export const CTA = () => {
         <div
             // Removed: bg-(--bg-primary) and borders. 
             // Now purely transparent to blend with the grid/gradient behind it.
-            className="p-6 md:p-10 lg:p-12 flex flex-col items-center justify-center gap-y-6 lg:justify-evenly h-full w-full"
+            className="
+              p-6 md:p-10 lg:p-12
+              flex flex-col
+              items-center
+              justify-center
+              gap-y-6
+              lg:justify-evenly
+              h-full
+              w-full
+              rounded-3xl
+              bg-white/5
+              backdrop-blur-md
+              border border-white/10
+              shadow-2xl
+              "
         >
             {/* --- Headline --- */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center text-balance tracking-tighter text-white drop-shadow-md">
