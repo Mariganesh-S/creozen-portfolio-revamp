@@ -208,7 +208,7 @@ const WhyCard = ({ icon: Icon, title, desc }) => (
         transition-all
         duration-300
      "
-    >
+>
         <div className="w-10 h-10 bg-[#0a0a0a] border border-(--guide-color) flex items-center justify-center text-white mb-4 rounded-md">
             <Icon size={20} />
         </div>
@@ -265,7 +265,29 @@ const FocusCard = ({ icon: Icon, title, desc }) => (
 );
 
 const LocationCard = ({ city, role, align }) => (
-    <div className="relative p-12 overflow-hidden group border-b sm:border-b-0 sm:first:border-r border-(--guide-color)">
+    <div
+    className="
+        relative
+        p-12
+        overflow-hidden
+        group
+        border-b
+        sm:border-b-0
+        sm:first:border-r
+        border-(--guide-color)
+        before:absolute
+        before:top-0
+        before:left-0
+        before:w-0
+        before:h-1
+        before:bg-gradient-to-r
+        before:from-purple-500
+        before:to-blue-500
+        before:transition-all
+        before:duration-300
+        hover:before:w-full
+    "
+>
         <div className={`flex flex-col h-full justify-between ${align === 'right' ? 'md:items-end md:text-right' : 'md:items-start'}`}>
             <div className="mb-8">
                 <div className="flex items-center gap-2 text-(--color-gray-500) mb-2">

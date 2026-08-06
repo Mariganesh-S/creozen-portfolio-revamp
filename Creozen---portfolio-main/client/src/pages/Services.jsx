@@ -202,12 +202,40 @@ export const Services = () => {
                     </p>
                     <div className="flex justify-center gap-4">
                          <Link to="/contact">
-                            <button className="px-8 py-3 bg-white text-black font-medium hover:bg-gray-200 transition-colors">
+                            <button
+    className="
+        mt-6
+        px-6
+        py-3
+        rounded-full
+        bg-gradient-to-r
+        from-purple-600
+        to-blue-600
+        text-white
+        transition-all
+        duration-300
+        hover:scale-105
+    "
+>
                                 Talk to Sales
                             </button>
                         </Link>
                         <Link to="/products">
-                            <button className="px-8 py-3 border border-white/20 text-white font-medium hover:bg-white/10 transition-colors">
+                            <button
+    className="
+        mt-6
+        px-6
+        py-3
+        rounded-full
+        bg-gradient-to-r
+        from-purple-600
+        to-blue-600
+        text-white
+        transition-all
+        duration-300
+        hover:scale-105
+    "
+>
                                 View Products
                             </button>
                         </Link>
