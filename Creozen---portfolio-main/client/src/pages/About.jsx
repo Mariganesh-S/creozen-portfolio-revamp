@@ -181,7 +181,7 @@ export const About = () => {
 /* --- Sub-Components --- */
 
 const ImpactItem = ({ icon: Icon, number, text }) => (
-    <div className="p-8 border-b sm:border-b-0 sm:even:border-l border-(--guide-color) group hover:bg-(--color-black-900) transition-colors flex flex-col justify-start">
+    <div className="p-8 border-b sm:border-b-0 sm:even:border-l border-(--guide-color) rounded-2xl group hover:bg-(--color-black-900) hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col justify-start">
         <div className="flex items-center gap-3 mb-3">
             <div className="p-2 bg-(--color-black-900) border border-(--guide-color) rounded-md group-hover:text-white transition-colors">
                 <Icon size={18} />
@@ -195,7 +195,20 @@ const ImpactItem = ({ icon: Icon, number, text }) => (
 );
 
 const WhyCard = ({ icon: Icon, title, desc }) => (
-    <div className="p-6 border border-(--guide-color) bg-(--bg-primary)">
+    <div
+       className="
+        p-6
+        border
+        border-(--guide-color)
+        bg-(--bg-primary)
+        rounded-2xl
+        hover:bg-(--color-black-900)
+        hover:-translate-y-2
+        hover:shadow-xl
+        transition-all
+        duration-300
+     "
+    >
         <div className="w-10 h-10 bg-[#0a0a0a] border border-(--guide-color) flex items-center justify-center text-white mb-4 rounded-md">
             <Icon size={20} />
         </div>
