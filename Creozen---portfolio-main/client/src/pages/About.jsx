@@ -220,7 +220,25 @@ const WhyCard = ({ icon: Icon, title, desc }) => (
 );
 
 const PhilosophyCard = ({ icon: Icon, title, desc }) => (
-    <div className="flex flex-col items-center text-center space-y-4">
+    <div
+    className="
+        flex
+        flex-col
+        items-center
+        text-center
+        space-y-4
+        p-8
+        rounded-2xl
+        border
+        border-(--guide-color)
+        bg-(--bg-primary)
+        transition-all
+        duration-300
+        hover:-translate-y-2
+        hover:bg-(--color-black-900)
+        hover:shadow-xl
+    "
+>
         <div className="w-12 h-12 rounded-full border border-(--guide-color) flex items-center justify-center text-white bg-(--color-black-900)">
             <Icon size={20} />
         </div>
