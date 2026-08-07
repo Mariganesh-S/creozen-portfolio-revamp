@@ -35,7 +35,7 @@ export const Careers = () => {
             />
 
             {/* --- 1. Hero Section --- */}
-            <div className="relative py-24 px-6 md:px-12 border-x border-(--guide-color) overflow-hidden">
+            <div className=" relative py-24 md:py-32 px-6 md:px-12 border-x border-(--guide-color) overflow-hidden">
                 {/* Background Grid */}
                 <div className="absolute inset-0 pointer-events-none opacity-[0.03]" 
                      style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
@@ -43,8 +43,8 @@ export const Careers = () => {
 
                 <div className="relative z-10 max-w-4xl">
                     <div className="flex items-center gap-3 mb-6">
-                        <div className="w-10 h-10 border border-(--guide-color) bg-black flex items-center justify-center text-white">
-                            <FiBriefcase />
+                        <div className=" w-12   h-12 rounded-xl border border-purple-500/40 bg-purple-500/10 flex items-center  justify-center text-purple-400 transition-all duration-300 hover:scale-110 hover:bg-purple-500/20 ">
+                         <FiBriefcase />
                         </div>
                         <span className="text-sm font-mono text-(--color-gray-500) uppercase tracking-widest">
                             Careers at Creozen
@@ -73,19 +73,19 @@ export const Careers = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 border-t border-l border-(--guide-color)">
                     {/* Perk 1 */}
                     <div className="p-8 border-r border-b border-(--guide-color) bg-(--bg-primary) group hover:bg-(--color-black-900) transition-colors">
-                        <FiCpu className="text-2xl text-blue-400 mb-4" />
+                        <FiCpu className="  text-2xl text-blue-400 mb-4 transition-all duration-300 group-hover:scale-110 group-hover:text-purple-400"/>
                         <h3 className="text-white font-medium mb-2">Cutting-Edge Tech</h3>
                         <p className="text-sm text-(--color-gray-500)">Work with the latest in GenAI, Computer Vision, and IoT hardware.</p>
                     </div>
                     {/* Perk 2 */}
                     <div className="p-8 border-r border-b border-(--guide-color) bg-(--bg-primary) group hover:bg-(--color-black-900) transition-colors">
-                        <FiGlobe className="text-2xl text-green-400 mb-4" />
+                        <FiGlobe  className=" text-2xl text-blue-400  mb-4  transition-all duration-300 group-hover:scale-110 group-hover:text-green-400"/>
                         <h3 className="text-white font-medium mb-2">Remote-First DNA</h3>
                         <p className="text-sm text-(--color-gray-500)">We hire the best talent, regardless of where they live. Flexible hours.</p>
                     </div>
                     {/* Perk 3 */}
                     <div className="p-8 border-r border-b border-(--guide-color) bg-(--bg-primary) group hover:bg-(--color-black-900) transition-colors">
-                        <FiHeart className="text-2xl text-red-400 mb-4" />
+                        <FiHeart className="text-2xl text-blue-400 mb-4  transition-all duration-300 group-hover:scale-110 group-hover:text-red-400"/>
                         <h3 className="text-white font-medium mb-2">Wellness & Growth</h3>
                         <p className="text-sm text-(--color-gray-500)">Competitive equity, learning stipends, and comprehensive health coverage.</p>
                     </div>
@@ -105,14 +105,45 @@ export const Careers = () => {
                     {JOBS.map((job) => (
                         <div 
                             key={job.id} 
-                            className="group p-8 md:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:bg-(--color-black-900) transition-colors"
+                            className="
+    group
+    p-8
+    md:p-10
+    flex
+    flex-col
+    md:flex-row
+    md:items-center
+    justify-between
+    gap-6
+    rounded-xl
+    mx-4
+    my-3
+    border
+    border-transparent
+    transition-all
+    duration-300
+    hover:border-purple-500/10
+    hover:bg-purple-500/2
+    hover:-translate-y-1
+    hover:shadow-lg
+    hover:shadow-purple-500/5
+"
                         >
                             <div className="max-w-2xl">
                                 <div className="flex items-center gap-3 mb-2">
-                                    <h3 className="text-xl font-medium text-white group-hover:text-blue-400 transition-colors">
+                                    <h3
+    className="
+        text-xl
+        font-medium
+        text-white
+        transition-colors
+        duration-300
+        group-hover:text-purple-400
+    "
+>
                                         {job.title}
                                     </h3>
-                                    <span className="text-[10px] font-mono uppercase bg-(--color-black-600) border border-(--guide-color) px-2 py-0.5 text-(--color-gray-400)">
+                                    <span className=" text-[10px] font-mono uppercase rounded-full bg-purple-500/10 border border-purple-500/30 px-3 py-1 text-white-300">
                                         {job.department}
                                     </span>
                                 </div>
@@ -126,7 +157,8 @@ export const Careers = () => {
                             </div>
 
                             <Link to={`/careers/apply?role=${job.id}`}>
-                                <button className="px-6 py-3 border border-(--guide-color) text-white text-sm font-medium hover:bg-white hover:text-black hover:border-white transition-all whitespace-nowrap flex items-center gap-2 group-hover/btn:translate-x-1 cursor-pointer">
+                                <button className=" px-6 py-3 rounded-full bg-gradient-to-r text-white text-sm font-medium
+                                       transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 whitespace-nowrap flex items-center gap-2 cursor-pointer">
                                     Apply Now <FiArrowRight />
                                 </button>
                             </Link>
@@ -143,7 +175,20 @@ export const Careers = () => {
                         We are always looking for exceptional talent. If you believe you can make an impact, send us an open application.
                     </p>
                     <Link to="/careers/apply">
-                        <button className="px-8 py-3 bg-white text-black text-sm font-medium hover:bg-(--color-gray-200) transition-colors cursor-pointer">
+                        <button className="
+    px-8
+    py-3
+    rounded-full
+    bg-white
+    text-black
+    text-sm
+    font-medium
+    transition-all
+    duration-300
+    hover:scale-105
+    hover:shadow-lg
+    cursor-pointer
+">
                             Submit General Application
                         </button>
                     </Link>

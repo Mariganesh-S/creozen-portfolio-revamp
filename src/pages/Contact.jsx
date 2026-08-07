@@ -284,7 +284,7 @@ export const Contact = () => {
                     <div className="flex-1 divide-y divide-(--guide-color)">
                         
                         {/* Email Block */}
-                        <div  className="  p-8  group  transition-all  duration-300 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-blue-500/5 ">
+                         <div className="p-8 hover:bg-(--color-black-900) transition-colors group">
                             <div className="flex items-center gap-3 mb-3 text-(--color-gray-400) group-hover:text-white transition-colors">
                                 <FiMail className="text-xl" />
                                 <span className="text-xs font-mono uppercase tracking-wider">Email</span>
