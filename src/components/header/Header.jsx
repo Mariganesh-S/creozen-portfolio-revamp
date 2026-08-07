@@ -87,7 +87,11 @@ export const Header = () => {
                 <div className="flex items-center justify-between gap-6">
                     <div className="w-[7rem] cursor-pointer">
                         <Link to="/">
-                            <img className="object-cover" src={logo} alt="Creozen Logo" />
+                          <img
+                            className="object-cover transition-all duration-300 hover:scale-110"
+                            src={logo}
+                            alt="Creozen Logo"
+                           />
                         </Link>
                     </div>
 

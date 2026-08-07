@@ -26,6 +26,7 @@ export const Hero = () => {
 
     return (
         <section className="relative mt-6" aria-label="Introduction">
+            
             {/* Decorative plus icon (top left) - Marked as decorative */}
             <img
                 className="absolute -top-[10px] -left-[10px]"
@@ -42,7 +43,14 @@ export const Hero = () => {
                 {Array.from({ length: filler }, (_, i) => (
                     <div
                         key={i}
-                        className="border border-(--guide-color) aspect-square"
+                        className="
+                          border border-(--guide-color)
+                           aspect-square
+                           transition-all
+                           duration-500
+                           hover:bg-purple-500/10
+                           hover:border-purple-500
+                            "
                     ></div>
                 ))}
 
@@ -64,12 +72,12 @@ export const Hero = () => {
                 <div className={styles["hero-gradient-bg"]}></div>
 
                 {/* Decorative plus icon (bottom right) */}
-                <img
-                    className="absolute -bottom-[9px] -right-[9px]"
-                    src={plus}
-                    alt=""
-                    aria-hidden="true"
-                />
+              <img
+               className="absolute -top-[10px] -left-[10px] transition-transform duration-500 hover:rotate-180"
+               src={plus}
+               alt=""
+               aria-hidden="true"
+               />
             </div>
 
             {/* --- Bottom Section: Partnership (E-E-A-T Trust Signal) --- */}
@@ -85,8 +93,8 @@ export const Hero = () => {
                             src={nvidia} 
                             alt="Official Technology Partner: NVIDIA Inception Program" 
                             title="Official Technology Partner: NVIDIA Inception Program"
-                            className='h-10' 
-                            style={{opacity: "50%"}}
+                            className="h-10 transition-aller:opacity-100"
+                            style={{opacity: 0.7}}
                         />
                     </div>
                 </div>

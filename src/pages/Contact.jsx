@@ -39,7 +39,19 @@ const FAQItem = ({ question, answer }) => {
         <div className="border-b border-(--guide-color)">
             <button 
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full py-6 flex items-center justify-between text-left group cursor-pointer"
+                className="
+    w-full
+    py-6
+    flex
+    items-center
+    justify-between
+    text-left
+    group
+    cursor-pointer
+    transition-all
+    duration-300
+    hover:px-3
+"
             >
                 <span className={`text-base font-medium transition-colors ${isOpen ? 'text-white' : 'text-(--color-gray-400) group-hover:text-white'}`}>
                     {question}
@@ -147,7 +159,24 @@ export const Contact = () => {
                                 type="text" 
                                 id="name"
                                 placeholder="John Doe"
-                                className="w-full bg-black border border-(--guide-color) p-3 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all duration-200"
+                                className="
+    w-full
+    rounded-xl
+    bg-black
+    border
+    border-(--guide-color)
+    px-4
+    py-3
+    text-sm
+    text-white
+    placeholder:text-(--color-gray-600)
+    outline-none
+    transition-all
+    duration-300
+    focus:border-purple-500
+    focus:ring-2
+    focus:ring-purple-500/20
+"
                             />
                         </div>
 
@@ -160,7 +189,24 @@ export const Contact = () => {
                                 type="email" 
                                 id="email"
                                 placeholder="john@company.com"
-                                className="w-full bg-black border border-(--guide-color) p-3 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all duration-200"
+                                className="
+    w-full
+    rounded-xl
+    bg-black
+    border
+    border-(--guide-color)
+    px-4
+    py-3
+    text-sm
+    text-white
+    placeholder:text-(--color-gray-600)
+    outline-none
+    transition-all
+    duration-300
+    focus:border-purple-500
+    focus:ring-2
+    focus:ring-purple-500/20
+"
                             />
                         </div>
 
@@ -173,7 +219,25 @@ export const Contact = () => {
                                 id="message"
                                 rows="5"
                                 placeholder="Tell us about your project..."
-                                className="w-full bg-black border border-(--guide-color) p-3 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all duration-200 resize-none"
+                                className="
+    w-full
+    rounded-xl
+    bg-black
+    border
+    border-(--guide-color)
+    px-4
+    py-3
+    text-sm
+    text-white
+    placeholder:text-(--color-gray-600)
+    outline-none
+    transition-all
+    duration-300
+    focus:border-purple-500
+    focus:ring-2
+    focus:ring-purple-500/20
+    resize-none
+"
                             ></textarea>
                         </div>
 
@@ -183,10 +247,14 @@ export const Contact = () => {
                                 type="submit"
                                 disabled={isSubmitting} // Disable while sending
                                 className={`
-                                    group flex items-center gap-2 bg-white text-black px-6 py-3 text-sm font-medium 
-                                    transition-all duration-200 
-                                    ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-(--color-gray-200) cursor-pointer'}
-                                `}
+                                           group flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r
+                                           from-purple-600 to-blue-600  text-white text-sm font-medium transition-all
+                                           duration-300
+                                           ${isSubmitting
+                                           ? 'opacity-70 cursor-not-allowed'
+                                          : 'hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer'
+                                             }
+                                         `}
                             >
                                 {isSubmitting ? (
                                     <>
@@ -216,7 +284,7 @@ export const Contact = () => {
                     <div className="flex-1 divide-y divide-(--guide-color)">
                         
                         {/* Email Block */}
-                        <div className="p-8 hover:bg-(--color-black-900) transition-colors group">
+                        <div  className="  p-8  group  transition-all  duration-300 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-blue-500/5 ">
                             <div className="flex items-center gap-3 mb-3 text-(--color-gray-400) group-hover:text-white transition-colors">
                                 <FiMail className="text-xl" />
                                 <span className="text-xs font-mono uppercase tracking-wider">Email</span>

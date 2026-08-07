@@ -181,7 +181,7 @@ export const About = () => {
 /* --- Sub-Components --- */
 
 const ImpactItem = ({ icon: Icon, number, text }) => (
-    <div className="p-8 border-b sm:border-b-0 sm:even:border-l border-(--guide-color) group hover:bg-(--color-black-900) transition-colors flex flex-col justify-start">
+    <div className="p-8 border-b sm:border-b-0 sm:even:border-l border-(--guide-color) rounded-2xl group hover:bg-(--color-black-900) hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col justify-start">
         <div className="flex items-center gap-3 mb-3">
             <div className="p-2 bg-(--color-black-900) border border-(--guide-color) rounded-md group-hover:text-white transition-colors">
                 <Icon size={18} />
@@ -195,7 +195,20 @@ const ImpactItem = ({ icon: Icon, number, text }) => (
 );
 
 const WhyCard = ({ icon: Icon, title, desc }) => (
-    <div className="p-6 border border-(--guide-color) bg-(--bg-primary)">
+    <div
+       className="
+        p-6
+        border
+        border-(--guide-color)
+        bg-(--bg-primary)
+        rounded-2xl
+        hover:bg-(--color-black-900)
+        hover:-translate-y-2
+        hover:shadow-xl
+        transition-all
+        duration-300
+     "
+>
         <div className="w-10 h-10 bg-[#0a0a0a] border border-(--guide-color) flex items-center justify-center text-white mb-4 rounded-md">
             <Icon size={20} />
         </div>
@@ -207,7 +220,25 @@ const WhyCard = ({ icon: Icon, title, desc }) => (
 );
 
 const PhilosophyCard = ({ icon: Icon, title, desc }) => (
-    <div className="flex flex-col items-center text-center space-y-4">
+    <div
+    className="
+        flex
+        flex-col
+        items-center
+        text-center
+        space-y-4
+        p-8
+        rounded-2xl
+        border
+        border-(--guide-color)
+        bg-(--bg-primary)
+        transition-all
+        duration-300
+        hover:-translate-y-2
+        hover:bg-(--color-black-900)
+        hover:shadow-xl
+    "
+>
         <div className="w-12 h-12 rounded-full border border-(--guide-color) flex items-center justify-center text-white bg-(--color-black-900)">
             <Icon size={20} />
         </div>
@@ -234,7 +265,29 @@ const FocusCard = ({ icon: Icon, title, desc }) => (
 );
 
 const LocationCard = ({ city, role, align }) => (
-    <div className="relative p-12 overflow-hidden group border-b sm:border-b-0 sm:first:border-r border-(--guide-color)">
+    <div
+    className="
+        relative
+        p-12
+        overflow-hidden
+        group
+        border-b
+        sm:border-b-0
+        sm:first:border-r
+        border-(--guide-color)
+        before:absolute
+        before:top-0
+        before:left-0
+        before:w-0
+        before:h-1
+        before:bg-gradient-to-r
+        before:from-purple-500
+        before:to-blue-500
+        before:transition-all
+        before:duration-300
+        hover:before:w-full
+    "
+>
         <div className={`flex flex-col h-full justify-between ${align === 'right' ? 'md:items-end md:text-right' : 'md:items-start'}`}>
             <div className="mb-8">
                 <div className="flex items-center gap-2 text-(--color-gray-500) mb-2">
