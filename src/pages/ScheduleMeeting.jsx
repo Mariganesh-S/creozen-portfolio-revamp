@@ -76,7 +76,7 @@ export const ScheduleMeeting = () => {
     };
 
     return (
-        <section className="primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color)">
+        <section className=" animate-in fade-in duration-700 bg-(--bg-primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border  border-(--guide-color)  rounded-3xl  overflow-hidden">
             
             <SEO 
                 title="Schedule a Discovery Call - AI Consultation"
@@ -85,15 +85,15 @@ export const ScheduleMeeting = () => {
             />
 
             {/* ... Hero Section (Unchanged) ... */}
-            <div className="relative py-24 px-6 md:px-12 border-x border-(--guide-color) overflow-hidden text-center">
+            <div className=" relative py-24 md:py-28 px-6 md:px-12 border-x border-(--guide-color) overflow-hidden text-center bg-gradient-to-b from-white/[0.03] to-transparent">
                 <div className="absolute inset-0 pointer-events-none opacity-[0.03]" 
                     style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
                 </div>
                 <div className="relative z-10 max-w-2xl mx-auto">
-                    <h5 className="text-blue-400 font-medium tracking-wide text-sm uppercase mb-4 inline-flex items-center gap-2 border border-blue-500/20 bg-blue-500/10 px-3 py-1 rounded-full">
+                    <h5 className="text-white  font-medium tracking-wide text-sm uppercase mb-4 inline-flex items-center gap-2 border border-white/20 bg-white/5 px-4 py-2 rounded-full transition-all duration-300 hover:bg-white/10 hover:border-white/40">
                         <BsStars /> Consultation
                     </h5>
-                    <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-white mb-6">
+                    <h1 className="text-4xl md:text-6xl font-semibold tracking-tight text-white mb-6 leading-tight">
                         Schedule a Meeting
                     </h1>
                     <p className="text-lg text-(--color-gray-400) leading-relaxed text-balance">
@@ -105,11 +105,11 @@ export const ScheduleMeeting = () => {
             <GridSeparator />
 
             {/* ... Scheduler Container ... */}
-            <div className="border-x border-b border-(--guide-color) flex justify-between bg-(--bg-primary)">
-                <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-3 min-h-[600px]">
+            <div className="border-x border-b border-(--guide-color) flex justify-center bg-(--bg-primary)">
+                <div className=" w-full max-w-6xl grid grid-cols-1 lg:grid-cols-3 min-h-[600px] overflow-hidden rounded-2xl border border-(--guide-color) my-8 mx-4 md:mx-8">
                     
                     {/* ... LEFT: Context Info (Unchanged) ... */}
-                    <div className="p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-(--guide-color) bg-(--color-black-900)">
+                    <div className=" p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-(--guide-color) bg-(--color-black-900) transition-all duration-300 ">
                         <h2 className="text-xl font-medium text-white mb-6">Discovery Call</h2>
                         <div className="space-y-6 text-sm text-(--color-gray-400)">
                             <div className="flex items-center gap-3">
@@ -193,9 +193,9 @@ export const ScheduleMeeting = () => {
 
                         {/* STEP 2: USER DETAILS FORM (Updated with Loading State) */}
                         {step === 2 && (
-                            <form onSubmit={handleSubmit} className="animate-in fade-in slide-in-from-right-4 duration-300 h-full flex flex-col">
-                                <div className="flex items-center gap-4 mb-8 pb-4 border-b border-(--guide-color)">
-                                    <button onClick={() => setStep(1)} type="button" className="text-(--color-gray-500) hover:text-white transition-colors">
+                            <form onSubmit={handleSubmit} className=" animate-in fade-in  slide-in-from-right-4  duration-300  h-full  flex  flex-col rounded-2xl">
+                                <div className=" flex items-center gap-4 mb-8 pb-5 border-b border-(--guide-color)">
+                                    <button onClick={() => setStep(1)} type="button" className="rounded-full border border-(--guide-color) px-4 py-2 text-sm text-(--color-gray-500) transition-all duration-300 hover:border-white/40 hover:text-white">
                                         &larr; Back
                                     </button>
                                     <div className="text-white">
