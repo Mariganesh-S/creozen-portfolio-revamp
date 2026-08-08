@@ -105,42 +105,11 @@ export const Careers = () => {
                     {JOBS.map((job) => (
                         <div 
                             key={job.id} 
-                            className="
-    group
-    p-8
-    md:p-10
-    flex
-    flex-col
-    md:flex-row
-    md:items-center
-    justify-between
-    gap-6
-    rounded-xl
-    mx-4
-    my-3
-    border
-    border-transparent
-    transition-all
-    duration-300
-    hover:border-purple-500/10
-    hover:bg-purple-500/2
-    hover:-translate-y-1
-    hover:shadow-lg
-    hover:shadow-purple-500/5
-"
-                        >
+                            className=" group p-8 md:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6 rounded-xl mx-4
+                            my-3 border border-transparent transition-all duration-300 hover:border-purple-500/10 hover:bg-purple-500/2 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/5">
                             <div className="max-w-2xl">
                                 <div className="flex items-center gap-3 mb-2">
-                                    <h3
-    className="
-        text-xl
-        font-medium
-        text-white
-        transition-colors
-        duration-300
-        group-hover:text-purple-400
-    "
->
+                                    <h3 className=" text-xl font-medium  text-white  transition-colors  duration-300  group-hover:text-purple-400 ">
                                         {job.title}
                                     </h3>
                                     <span className=" text-[10px] font-mono uppercase rounded-full bg-purple-500/10 border border-purple-500/30 px-3 py-1 text-white-300">
@@ -175,20 +144,7 @@ export const Careers = () => {
                         We are always looking for exceptional talent. If you believe you can make an impact, send us an open application.
                     </p>
                     <Link to="/careers/apply">
-                        <button className="
-    px-8
-    py-3
-    rounded-full
-    bg-white
-    text-black
-    text-sm
-    font-medium
-    transition-all
-    duration-300
-    hover:scale-105
-    hover:shadow-lg
-    cursor-pointer
-">
+                        <button className="px-8 py-3 rounded-full bg-white text-black text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer">
                             Submit General Application
                         </button>
                     </Link>

@@ -9,14 +9,39 @@ export const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="max-w-(--content-max-width) mx-auto py-16 border-t border-(--guide-color) sm:px-16 md:px-24 px-6">
+            <footer
+    className="
+        max-w-(--content-max-width)
+        mx-auto
+        py-20
+        border-t
+        border-(--guide-color)
+        sm:px-16
+        md:px-24
+        px-6
+        relative
+        overflow-hidden
+    "
+>
             
             <div className="flex flex-col gap-12 lg:flex-row items-start">
                 
                 {/* Logo & Tagline Section */}
                 <div className="w-full lg:w-16 flex flex-col gap-4 lg:order-2 lg:items-end">
                     <Link to="/">
-                        <img src={logo} alt="Creozen Logo" className="w-10 h-10 hover:opacity-80 transition-opacity" />
+                        <img
+    src={logo}
+    alt="Creozen Logo"
+    className="
+        w-10
+        h-10
+        transition-all
+        duration-300
+        hover:scale-110
+        hover:rotate-3
+        hover:opacity-80
+    "
+/>
                     </Link>
                 </div>
 
@@ -108,7 +133,7 @@ export const Footer = () => {
             <div className="mt-4 pt-8 border-t border-(--guide-color) text-(--color-gray-500) text-xs flex flex-col md:flex-row justify-between items-center gap-4">
                 <p>&copy; {currentYear} <span className='text-white font-medium'>Creozen Ltd</span>. All rights reserved.</p>
                 <div className="flex gap-6 font-mono text-[10px] tracking-wider opacity-60">
-                    <span className="flex items-center gap-1.5"><div className="w-1.5 h-1.5 bg-blue-500"></div> LONDON, UK</span>
+                    <span className="flex items-center gap-1.5"><div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></div> LONDON, UK</span>
                     <span className="flex items-center gap-1.5"><div className="w-1.5 h-1.5 bg-purple-500"></div> CHENNAI, IN</span>
                 </div>
             </div>

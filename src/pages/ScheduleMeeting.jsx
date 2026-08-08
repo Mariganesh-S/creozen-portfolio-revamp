@@ -76,7 +76,7 @@ export const ScheduleMeeting = () => {
     };
 
     return (
-        <section className="animate-in fade-in duration-700 bg-(--bg-primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color)">
+        <section className="primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color)">
             
             <SEO 
                 title="Schedule a Discovery Call - AI Consultation"
