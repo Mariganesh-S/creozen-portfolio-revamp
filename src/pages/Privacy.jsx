@@ -14,9 +14,24 @@ export const Privacy = () => {
                 subtitle="How we collect, use, and protect your data."
                 lastUpdated="May 19, 2026"
             >
-                <section className="space-y-4">
+                <section
+    className="
+        group
+        space-y-5
+        rounded-2xl
+        border
+        border-(--guide-color)
+        bg-(--bg-primary)
+        p-6
+        md:p-8
+        transition-all
+        duration-300
+        hover:bg-white/[0.02]
+        hover:border-white/20
+    "
+>
                     <h2 className="text-2xl text-white">1. Information Collection</h2>
-                    <p>
+                    <p className="text-sm md:text-base text-(--color-gray-500) leading-7">
                         We collect information to provide better services to all our users. This includes:
                     </p>
                     <ul className="list-disc pl-5 space-y-2">
@@ -26,33 +41,93 @@ export const Privacy = () => {
                     </ul>
                 </section>
 
-                <section className="space-y-4">
+                <section
+    className="
+        group
+        space-y-5
+        rounded-2xl
+        border
+        border-(--guide-color)
+        bg-(--bg-primary)
+        p-6
+        md:p-8
+        transition-all
+        duration-300
+        hover:bg-white/[0.02]
+        hover:border-white/20
+    "
+>
                     <h2 className="text-2xl text-white">2. Data Usage</h2>
                     <p>
                         We use the collected data to:
                     </p>
-                    <ul className="list-disc pl-5 space-y-2">
+                    <ul className="list-disc pl-5 space-y-3 text-sm md:text-base text-(--color-gray-500) leading-7">
                         <li>Provide, maintain, and improve our services.</li>
                         <li>Develop new AI features and products.</li>
                         <li>Provide customer support and respond to inquiries.</li>
                     </ul>
                 </section>
 
-                <section className="space-y-4">
+                <section
+    className="
+        group
+        space-y-5
+        rounded-2xl
+        border
+        border-(--guide-color)
+        bg-(--bg-primary)
+        p-6
+        md:p-8
+        transition-all
+        duration-300
+        hover:bg-white/[0.02]
+        hover:border-white/20
+    "
+>
                     <h2 className="text-2xl text-white">3. Data Security</h2>
                     <p>
                         We implement industry-standard security measures, including encryption and strict access controls, to protect your data from unauthorized access, alteration, disclosure, or destruction.
                     </p>
                 </section>
 
-                <section className="space-y-4">
+                <section
+    className="
+        group
+        space-y-5
+        rounded-2xl
+        border
+        border-(--guide-color)
+        bg-(--bg-primary)
+        p-6
+        md:p-8
+        transition-all
+        duration-300
+        hover:bg-white/[0.02]
+        hover:border-white/20
+    "
+>
                     <h2 className="text-2xl text-white">4. Third-Party Sharing</h2>
                     <p>
                         We do not sell your personal data. We may share data with trusted third-party service providers (e.g., cloud hosting) solely for the purpose of operating our services, under strict confidentiality agreements.
                     </p>
                 </section>
 
-                <section className="space-y-4">
+                <section
+    className="
+        group
+        space-y-5
+        rounded-2xl
+        border
+        border-(--guide-color)
+        bg-(--bg-primary)
+        p-6
+        md:p-8
+        transition-all
+        duration-300
+        hover:bg-white/[0.02]
+        hover:border-white/20
+    "
+>
                     <h2 className="text-2xl text-white">
                         5. Your Rights & Data Deletion (Meta/Instagram Compliance)
                     </h2>
