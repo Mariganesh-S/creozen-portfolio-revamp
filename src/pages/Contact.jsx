@@ -246,15 +246,12 @@ export const Contact = () => {
                             <button 
                                 type="submit"
                                 disabled={isSubmitting} // Disable while sending
-                                className={`
-                                           group flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r
-                                           from-purple-600 to-blue-600  text-white text-sm font-medium transition-all
-                                           duration-300
-                                           ${isSubmitting
-                                           ? 'opacity-70 cursor-not-allowed'
-                                          : 'hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 cursor-pointer'
-                                             }
-                                         `}
+                               className={` group flex items-center gap-2 px-7 py-3.5 rounded-ful bg-white text-black text-sm font-semibold border border-white transition-all duration-300
+    ${isSubmitting
+        ? 'opacity-60 cursor-not-allowed'
+        : 'hover:bg-transparent hover:text-white hover:translate-x-1 cursor-pointer'
+    }
+`}
                             >
                                 {isSubmitting ? (
                                     <>

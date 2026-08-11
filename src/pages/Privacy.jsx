@@ -41,22 +41,7 @@ export const Privacy = () => {
                     </ul>
                 </section>
 
-                <section
-    className="
-        group
-        space-y-5
-        rounded-2xl
-        border
-        border-(--guide-color)
-        bg-(--bg-primary)
-        p-6
-        md:p-8
-        transition-all
-        duration-300
-        hover:bg-white/[0.02]
-        hover:border-white/20
-    "
->
+                <section className="group space-y-5 rounded-2xl border border-(--guide-color) bg-(--bg-primary) p-6 md:p-8 transition-all duration-300 hover:bg-white/[0.02] hover:border-white/20">
                     <h2 className="text-2xl text-white">2. Data Usage</h2>
                     <p>
                         We use the collected data to:
@@ -68,66 +53,21 @@ export const Privacy = () => {
                     </ul>
                 </section>
 
-                <section
-    className="
-        group
-        space-y-5
-        rounded-2xl
-        border
-        border-(--guide-color)
-        bg-(--bg-primary)
-        p-6
-        md:p-8
-        transition-all
-        duration-300
-        hover:bg-white/[0.02]
-        hover:border-white/20
-    "
->
+                <section className="group space-y-5 rounded-2xl border border-(--guide-color) bg-(--bg-primary) p-6 md:p-8 transition-all duration-300 hover:bg-white/[0.02] hover:border-white/20">
                     <h2 className="text-2xl text-white">3. Data Security</h2>
                     <p>
                         We implement industry-standard security measures, including encryption and strict access controls, to protect your data from unauthorized access, alteration, disclosure, or destruction.
                     </p>
                 </section>
 
-                <section
-    className="
-        group
-        space-y-5
-        rounded-2xl
-        border
-        border-(--guide-color)
-        bg-(--bg-primary)
-        p-6
-        md:p-8
-        transition-all
-        duration-300
-        hover:bg-white/[0.02]
-        hover:border-white/20
-    "
->
+                <section className="group space-y-5 rounded-2xl  border  border-(--guide-color) bg-(--bg-primary) p-6 md:p-8 transition-all duration-300 hover:bg-white/[0.02] hover:border-white/20">
                     <h2 className="text-2xl text-white">4. Third-Party Sharing</h2>
                     <p>
                         We do not sell your personal data. We may share data with trusted third-party service providers (e.g., cloud hosting) solely for the purpose of operating our services, under strict confidentiality agreements.
                     </p>
                 </section>
 
-                <section
-    className="
-        group
-        space-y-5
-        rounded-2xl
-        border
-        border-(--guide-color)
-        bg-(--bg-primary)
-        p-6
-        md:p-8
-        transition-all
-        duration-300
-        hover:bg-white/[0.02]
-        hover:border-white/20
-    "
->
+                <section className="group space-y-5 rounded-2xl border border-(--guide-color) bg-(--bg-primary) p-6 md:p-8  transition-all duration-300 hover:bg-white/[0.02] hover:border-white/20">
                     <h2 className="text-2xl text-white">
                         5. Your Rights & Data Deletion (Meta/Instagram Compliance)
                     </h2>
