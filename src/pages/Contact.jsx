@@ -114,7 +114,7 @@ export const Contact = () => {
     };
 
     return (
-        <section className="animate-in fade-in duration-700 bg-(--bg-primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color)">
+        <section className="animate-in fade-in duration-700 bg-(--bg-primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color) rounded-3xl overflow-hidden">
             
             <SEO 
                 title="Contact Us - AI Consultancy & Support | Creozen"
@@ -130,9 +130,10 @@ export const Contact = () => {
                 </div>
 
                 <div className="relative z-10 max-w-2xl mx-auto">
-                    <h5 className="text-blue-400 font-medium tracking-wide text-sm uppercase mb-4 inline-flex items-center gap-2 border border-blue-500/20 bg-blue-500/10 px-3 py-1 rounded-full">
-                        <BsStars /> Get in touch
-                    </h5>
+                    <h5 className="text-(--color-gray-300) font-medium tracking-wide text-sm uppercase mb-4 inline-flex items-center gap-2 border border-(--guide-color) bg-(--color-black-900) px-4 py-2 rounded-full">
+                     <BsStars />
+                      Get in touch
+                     </h5>
                     <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-white mb-6">
                         Contact Us
                     </h1>
@@ -173,9 +174,9 @@ export const Contact = () => {
     outline-none
     transition-all
     duration-300
-    focus:border-purple-500
+    focus:border-white-500
     focus:ring-2
-    focus:ring-purple-500/20
+    focus:ring-white-500/20
 "
                             />
                         </div>
@@ -203,9 +204,9 @@ export const Contact = () => {
     outline-none
     transition-all
     duration-300
-    focus:border-purple-500
+    focus:border-white-500
     focus:ring-2
-    focus:ring-purple-500/20
+    focus:ring-white-500/20
 "
                             />
                         </div>
@@ -233,9 +234,9 @@ export const Contact = () => {
     outline-none
     transition-all
     duration-300
-    focus:border-purple-500
+    focus:border-white-500
     focus:ring-2
-    focus:ring-purple-500/20
+    focus:ring-white-500/20
     resize-none
 "
                             ></textarea>
@@ -243,27 +244,28 @@ export const Contact = () => {
 
                         {/* Submit Button */}
                         <div className="pt-2">
-                            <button 
-                                type="submit"
-                                disabled={isSubmitting} // Disable while sending
-                               className={` group flex items-center gap-2 px-7 py-3.5 rounded-ful bg-white text-black text-sm font-semibold border border-white transition-all duration-300
-    ${isSubmitting
-        ? 'opacity-60 cursor-not-allowed'
-        : 'hover:bg-transparent hover:text-white hover:translate-x-1 cursor-pointer'
-    }
-`}
-                            >
-                                {isSubmitting ? (
-                                    <>
-                                        <FiLoader className="animate-spin" /> Sending...
-                                    </>
-                                ) : (
-                                    <>
-                                        Send Message 
-                                        <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-                                    </>
-                                )}
-                            </button>
+                            <button
+    type="submit"
+    disabled={isSubmitting}
+    className={`group flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-black text-sm font-semibold border border-white transition-all duration-300
+    ${
+        isSubmitting
+            ? 'opacity-60 cursor-not-allowed'
+            : 'hover:bg-black hover:text-white hover:translate-x-1 cursor-pointer'
+    }`}
+>
+    {isSubmitting ? (
+        <>
+            <FiLoader className="animate-spin" />
+            Sending...
+        </>
+    ) : (
+        <>
+            Send Message
+            <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+        </>
+    )}
+</button>
                         </div>
                     </form>
                 </div>
@@ -324,7 +326,7 @@ export const Contact = () => {
 
                          {/* Support Block */}
                         <div className="p-8 bg-(--bg-primary) flex-1">
-                            <div className="border border-dashed border-(--guide-color) rounded p-4 text-center">
+                            <div className="border border-(--guide-color) rounded-2xl p-5 text-center bg-black">
                                 <FiMessageSquare className="mx-auto text-(--color-gray-600) mb-2" />
                                 <p className="text-xs text-(--color-gray-500)">
                                     We'd love to hear from you. <br />

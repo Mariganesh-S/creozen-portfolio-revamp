@@ -69,10 +69,39 @@ export const Header = () => {
                 !isMobileNavOpen && scrolled ? 'border-b' : ''
             } border-(--guide-color) ${isMobileNavOpen ? '!w-[100vw]' : ''}`}
         >
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 transition-colors text-white text-xs sm:text-sm py-2 px-4 text-center flex items-center justify-center gap-2">
-                <span className="font-medium">Don't miss our exclusive Private AI Workshop!</span>
-                <Link to="/paid-workshop" className="underline font-semibold text-blue-100 hover:text-white transition-colors">Register Now</Link>
-            </div>
+            <div className="
+    bg-(--color-purple-900)
+    border-b
+    border-(--guide-color)
+    text-white
+    text-xs
+    sm:text-sm
+    py-2.5
+    px-4
+    text-center
+    flex
+    items-center
+    justify-center
+    gap-2
+">
+    <span className="font-medium text-(--color-gray-300)">
+        Don't miss our exclusive Private AI Workshop!
+    </span>
+
+    <Link
+        to="/paid-workshop"
+        className="
+            text-white
+            font-semibold
+            underline
+            underline-offset-4
+            hover:text-(--color-gray-300)
+            transition-colors
+        "
+    >
+        Register Now
+    </Link>
+</div>
             {popup && (
                 <div
                     className="hidden xl:block"
@@ -83,7 +112,17 @@ export const Header = () => {
                 </div>
             )}
 
-            <div className={`flex items-center justify-between px-6 h-16 bg-(--bg-primary) max-w-[1500px] mx-auto`}>
+            <div className="
+    flex
+    items-center
+    justify-between
+    px-4
+    sm:px-6
+    h-16
+    bg-(--bg-primary)
+    max-w-[1500px]
+    mx-auto
+">
                 <div className="flex items-center justify-between gap-6">
                     <div className="w-[7rem] cursor-pointer">
                         <Link to="/">

@@ -25,7 +25,7 @@ const JOBS = [
 
 export const Careers = () => {
     return (
-        <section className="animate-in fade-in duration-700 bg-(--bg-primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color)">
+        <section className="animate-in fade-in duration-700 bg-(--bg-primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color) rounded-3xl overflow-hidden">
             
             <SEO 
                 title="Careers at Creozen - Join the Future of AI Engineering"
@@ -43,7 +43,7 @@ export const Careers = () => {
 
                 <div className="relative z-10 max-w-4xl">
                     <div className="flex items-center gap-3 mb-6">
-                        <div className=" w-12   h-12 rounded-xl border border-purple-500/40 bg-purple-500/10 flex items-center  justify-center text-purple-400 transition-all duration-300 hover:scale-110 hover:bg-purple-500/20 ">
+                        <div className=" w-12   h-12 rounded-xl border border-white bg-white-500/10 flex items-center  justify-center text-white-400 transition-all duration-300 hover:scale-110 hover:bg-white-500/20 ">
                          <FiBriefcase />
                         </div>
                         <span className="text-sm font-mono text-(--color-gray-500) uppercase tracking-widest">
@@ -106,15 +106,15 @@ export const Careers = () => {
                         <div 
                             key={job.id} 
                             className=" group p-8 md:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6 rounded-xl mx-4
-                            my-3 border border-transparent transition-all duration-300 hover:border-purple-500/10 hover:bg-purple-500/2 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/5">
+                            my-3 border border-transparent transition-all duration-300 hover:border-white hover:bg-white-500/23 hover:-translate-y-1 hover:shadow-lg hover:shadow-white-500/100">
                             <div className="max-w-2xl">
                                 <div className="flex items-center gap-3 mb-2">
-                                    <h3 className=" text-xl font-medium  text-white  transition-colors  duration-300  group-hover:text-purple-400 ">
+                                    <h3 className=" text-xl font-medium  text-white  transition-colors  duration-300  group-hover:text-white ">
                                         {job.title}
                                     </h3>
-                                    <span className=" text-[10px] font-mono uppercase rounded-full bg-purple-500/10 border border-purple-500/30 px-3 py-1 text-white-300">
-                                        {job.department}
-                                    </span>
+                                    <span className="text-[10px] font-mono uppercase rounded-full bg-(--color-black-900) border border-(--guide-color) px-3 py-1 text-(--color-gray-300)">
+                                     {job.department}
+                                     </span>
                                 </div>
                                 <p className="text-sm text-(--color-gray-500) mb-4">
                                     {job.desc}
@@ -125,19 +125,18 @@ export const Careers = () => {
                                 </div>
                             </div>
 
-                            <Link to={`/careers/apply?role=${job.id}`}>
-                                <button className=" px-6 py-3 rounded-full bg-gradient-to-r text-white text-sm font-medium
-                                       transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 whitespace-nowrap flex items-center gap-2 cursor-pointer">
-                                    Apply Now <FiArrowRight />
-                                </button>
-                            </Link>
+                     <Link to={`/careers/apply?role=${job.id}`}>
+                     <button className="px-6 py-3 rounded-full bg-white text-black text-sm font-medium transition-all duration-300 hover:bg-(--color-gray-200) hover:scale-105 hover:shadow-lg whitespace-nowrap flex items-center gap-2 cursor-pointer">
+                       Apply Now <FiArrowRight />
+                         </button>
+                         </Link>
                         </div>
                     ))}
                 </div>
             </div>
 
             {/* --- 4. General Application CTA --- */}
-            <div className="border-x border-b border-(--guide-color) p-12 text-center bg-black">
+            <div className="border border-(--guide-color) rounded-2xl p-12 text-center bg-black mx-4 mb-4">
                 <div className="max-w-2xl mx-auto">
                     <h3 className="text-white text-xl font-medium mb-4">Don't see a perfect fit?</h3>
                     <p className="text-(--color-gray-500) mb-8">
