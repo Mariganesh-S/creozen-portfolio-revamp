@@ -91,7 +91,18 @@ export const WorkshopForm = () => {
     }
 
     return (
-        <section className="animate-in fade-in duration-700 bg-(--bg-primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color)">
+            <section
+    className="
+        animate-in fade-in duration-700
+        bg-(--bg-primary)
+        max-w-(--content-max-width)
+        mx-auto
+        my-12 md:my-20
+        border border-(--guide-color)
+        rounded-3xl
+        overflow-hidden
+    "
+>
             
             <SEO 
                 title="Workshop Registration | Creozen"
@@ -101,7 +112,17 @@ export const WorkshopForm = () => {
             />
 
             {/* --- Hero Section --- */}
-            <div className="relative py-24 px-6 md:px-12 border-b border-(--guide-color) overflow-hidden text-center">
+            <div
+    className="
+        relative
+        py-24
+        px-6 md:px-12
+        border-b border-(--guide-color)
+        overflow-hidden
+        text-center
+        rounded-t-3xl
+    "
+>
                 <div className="absolute inset-0 pointer-events-none opacity-[0.03]" 
                      style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
                 </div>
@@ -117,7 +138,23 @@ export const WorkshopForm = () => {
                         Join us for a hands-on workshop where you'll learn how to build a <span className="text-white font-medium">complete AI-powered application</span> using <span className="text-purple-400 font-medium">RAG Pipelines (Ingestion and Inference)</span>.
                     </p>
                     
-                    <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 text-sm md:text-base p-5 mb-8 max-w-3xl mx-auto shadow-[0_0_30px_-10px_rgba(59,130,246,0.1)]">
+                    <div
+    className="
+        flex flex-wrap
+        items-center
+        justify-center
+        gap-4 md:gap-8
+        text-sm md:text-base
+        p-5
+        mb-8
+        max-w-3xl
+        mx-auto
+        bg-black/40
+        border border-(--guide-color)
+        rounded-2xl
+        shadow-[0_0_30px_-10px_rgba(59,130,246,0.1)]
+    "
+>
                         <span className="flex items-center gap-2 text-white/90 font-medium">
                             <FiCalendar className="text-blue-400 text-lg" /> 13 July 2026
                         </span>
@@ -134,7 +171,21 @@ export const WorkshopForm = () => {
                     <a 
                         href={workshopPdf}
                         download="Workshop_Notice_Creozen.pdf"
-                        className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-6 py-3 rounded text-sm font-medium transition-all duration-200 cursor-pointer"
+                        className="
+    inline-flex
+    items-center
+    gap-2
+    bg-white/10
+    hover:bg-white/20
+    border border-white/20
+    text-white
+    px-6 py-3
+    rounded-xl
+    text-sm
+    font-medium
+    transition-all duration-200
+    cursor-pointer
+"
                     >
                         <FiDownload className="text-lg" /> Download Full Syllabus & Notice
                     </a>
@@ -289,10 +340,25 @@ export const WorkshopForm = () => {
                             type="submit"
                             disabled={isSubmitting}
                             className={`
-                                group flex items-center gap-2 bg-white text-black px-8 py-3 text-sm font-medium 
-                                transition-all duration-200 
-                                ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-(--color-gray-200) cursor-pointer'}
-                            `}
+    group
+    flex
+    items-center
+    gap-2
+    bg-white
+    text-black
+    px-8
+    py-3.5
+    rounded-xl
+    text-sm
+    font-semibold
+    transition-all duration-200
+    shadow-lg shadow-white/5
+    ${
+        isSubmitting
+            ? 'opacity-70 cursor-not-allowed'
+            : 'hover:bg-(--color-gray-200) hover:scale-[1.02] cursor-pointer'
+    }
+`}
                         >
                             {isSubmitting ? (
                                 <>
