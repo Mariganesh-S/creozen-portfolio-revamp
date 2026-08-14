@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Project files
+assets/images/products/
+
+# Environment variables
+.env
+.env.*
+!.env.example
