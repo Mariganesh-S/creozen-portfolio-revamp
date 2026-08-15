@@ -18,11 +18,11 @@ const LandingPage = () => {
                 canonical="/"
             />
 
-            <main className="max-w-(--content-max-width) mx-auto">
+            <main className="max-w-(--content-max-width) mx-auto px-3 md:px-4">
                 <Hero />
                 
                 {/* The main content block container, applying the Vercel-style borders */}
-                <div className="border-x border-b border-(--guide-color) w-full">
+                <div className=" w-full overflow-hidden rounded-3xl border border-(--guide-color) bg-(--bg-primary)">
                     {/* Visual Separator Component */}
                     <GridSeparator />
 

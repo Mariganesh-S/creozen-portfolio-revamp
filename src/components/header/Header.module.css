@@ -2,18 +2,39 @@
 
 /* header styles */
 .header-btn-primary {
-    @apply px-3 py-1.5 border border-(--color-gray-alpha-200) rounded-md cursor-pointer
-        bg-(--color-black-900) hover:bg-(--color-gray-900) duration-200;
+    @apply px-5 py-2.5 rounded-full
+    bg-white
+    text-black
+    font-medium
+    border border-white
+    transition-all duration-300
+    hover:bg-(--color-gray-200)
+    hover:-translate-y-0.5
+    hover:shadow-lg;
 }
 
 .header-btn-secondary {
-    @apply px-3 py-1.5 border rounded-md bg-(--color-gray-50) text-black cursor-pointer
-                hover:opacity-90 duration-200;
+    @apply px-5 py-2.5 rounded-full
+    bg-(--color-black-900)
+    text-white
+    border border-(--guide-color)
+    font-medium
+    transition-all duration-300
+    hover:bg-(--color-black-600)
+    hover:border-white/30
+    hover:-translate-y-0.5
+    hover:shadow-lg;
 }
 
 /* desktop nav styles */
 .desktop-nav ul li {
-    @apply px-3 py-2 rounded-full cursor-pointer leading-[1];
+    @apply px-4 py-2 rounded-full cursor-pointer leading-[1]
+    transition-all duration-300;
+}
+
+.desktop-nav ul li:hover {
+    @apply bg-purple-600 text-white;
+    transform: translateY(-2px);
 }
 
 .desktop-nav ul li:hover {
