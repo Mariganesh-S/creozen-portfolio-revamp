@@ -60,7 +60,7 @@ export const CareersForm = () => {
     };
 
     return (
-        <section className="animate-in fade-in duration-700 bg-(--bg-primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color)">
+            <section className="animate-in fade-in duration-700 bg-(--bg-primary) max-w-(--content-max-width) mx-auto my-12 md:my-20  overflow-hidden rounded-3xl  border border-(--guide-color)">
             
             <SEO 
                 title="Submit Job Application - Creozen Careers"
@@ -69,7 +69,7 @@ export const CareersForm = () => {
             />
 
             {/* --- Hero Section --- */}
-            <div className="relative py-24 px-6 md:px-12 border-x border-(--guide-color) overflow-hidden text-center">
+            <div className="relative py-20 md:py-24 px-6 md:px-12 border-b border-(--guide-color) overflow-hidden text-center">
                 <div className="absolute inset-0 pointer-events-none opacity-[0.03]" 
                      style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
                 </div>
@@ -90,7 +90,7 @@ export const CareersForm = () => {
 
             {/* --- Form Section --- */}
             <div className="border-x border-b border-(--guide-color) flex justify-center bg-(--bg-primary)">
-                <div className="w-full max-w-4xl border-x border-(--guide-color) bg-black">
+                <div className="w-full rounded-xl bg-black border border-(--guide-color) px-4 py-3 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-white focus:ring-1 focus:ring-white/20 transition-all duration-200">
                     <div className="p-8 md:p-12 lg:p-16">
                         
                         {step === 1 && (
@@ -207,8 +207,7 @@ export const CareersForm = () => {
                                 <div className="pt-4 flex justify-end border-t border-(--guide-color)">
                                     <button 
                                         type="submit"
-                                        className="bg-white text-black px-8 py-3 text-sm font-medium hover:bg-(--color-gray-200) transition-colors flex items-center gap-2 cursor-pointer"
-                                    >
+                                        className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-black border border-white transition-all duration-300 hover:bg-transparent hover:text-white hover:-translate-y-0.5 cursor-pointer">
                                         Submit Application <FiArrowRight />
                                     </button>
                                 </div>

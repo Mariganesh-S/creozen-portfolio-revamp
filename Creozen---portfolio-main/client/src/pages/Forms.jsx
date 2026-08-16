@@ -44,7 +44,7 @@ export const Forms = () => {
     };
 
     return (
-        <section className="animate-in fade-in duration-700 bg-(--bg-primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color)">
+        <section className=" animate-in fade-in duration-700 bg-(--bg-primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color) rounded-3xl overflow-hidden shadow-2xl shadow-purple-500/5">
             
             <SEO 
                 title="Book a Product Demo - Smart Vision & University Suite"
@@ -53,14 +53,14 @@ export const Forms = () => {
             />
 
             {/* --- 1. Hero Section --- */}
-            <div className="relative py-24 px-6 md:px-12 border-x border-(--guide-color) overflow-hidden text-center">
+            <div className="  relative  py-24  md:py-28  px-6  md:px-12  border-x  border-(--guide-color)  overflow-hidden text-center   bg-gradient-to-b from-purple-500/5 to-transparent">
                 {/* Background Grid Pattern */}
                 <div className="absolute inset-0 pointer-events-none opacity-[0.03]" 
                      style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
                 </div>
 
                 <div className="relative z-10 max-w-2xl mx-auto">
-                    <h5 className="text-blue-400 font-medium tracking-wide text-sm uppercase mb-4 inline-flex items-center gap-2 border border-blue-500/20 bg-blue-500/10 px-3 py-1 rounded-full">
+                    <h5 className=" text-purple-300 font-medium tracking-wide text-sm uppercase mb-4 inline-flex items-center gap-2 border  border-purple-500/30  bg-purple-500/10  px-4  py-2 rounded-full  transition-all  duration-300  hover:bg-purple-500/20  hover:scale-105">
                         <BsStars /> Early Access
                     </h5>
                     <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-white mb-6">
@@ -78,7 +78,7 @@ export const Forms = () => {
             <div className="border-x border-b border-(--guide-color) flex justify-center bg-(--bg-primary)">
                 
                 {/* Wrapper to control width and center it */}
-                <div className="w-full max-w-4xl border-x border-(--guide-color) bg-black">
+                <div className=" w-full max-w-4xl border-x border-(--guide-color) bg-black rounded-2xl overflow-hidden">
                     
                     <div className="p-8 md:p-12 lg:p-16">
                         <form className="space-y-8" onSubmit={handleSubmit}>
@@ -94,9 +94,7 @@ export const Forms = () => {
                                         type="text" 
                                         id="name"
                                         placeholder="Enter your full name"
-                                        className="w-full bg-(--bg-primary) border border-(--guide-color) p-3 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all duration-200"
-                                        required
-                                    />
+                                        className=" w-full bg-(--bg-primary) border border-(--guide-color) rounded-xl p-3.5 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-non focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"required/>
                                 </div>
 
                                 {/* Designation (Select) */}
@@ -107,7 +105,7 @@ export const Forms = () => {
                                     <div className="relative">
                                         <select 
                                             id="designation"
-                                            className="w-full appearance-none bg-(--bg-primary) border border-(--guide-color) p-3 text-sm text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all duration-200 cursor-pointer"
+                                            className=" w-full bg-(--bg-primary) border border-(--guide-color) rounded-xl p-3.5 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                                             required
                                             defaultValue=""
                                         >
@@ -133,7 +131,7 @@ export const Forms = () => {
                                         type="email" 
                                         id="email"
                                         placeholder="you@company.com"
-                                        className="w-full bg-(--bg-primary) border border-(--guide-color) p-3 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all duration-200"
+                                        className="w-full bg-(--bg-primary) border border-(--guide-color) rounded-xl p-3.5 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-purple-500 focus:ring-2  focus:ring-purple-500/20  transition-all duration-300"
                                         required
                                     />
                                 </div>
@@ -147,8 +145,7 @@ export const Forms = () => {
                                         type="text" 
                                         id="company"
                                         placeholder="Acme Corp / University of X"
-                                        className="w-full bg-(--bg-primary) border border-(--guide-color) p-3 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all duration-200"
-                                    />
+                                        className="w-full bg-(--bg-primary) border border-(--guide-color) rounded-xl p-3.5 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-purple-500  focus:ring-2  focus:ring-purple-500/20  transition-all  duration-300"/>
                                 </div>
                             </div>
 
@@ -163,7 +160,7 @@ export const Forms = () => {
                                         type="url" 
                                         id="video"
                                         placeholder="https://drive.google.com/file/d/..."
-                                        className="w-full bg-(--bg-primary) border border-(--guide-color) p-3 pl-10 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all duration-200"
+                                        className=" w-full bg-(--bg-primary) border border-(--guide-color) rounded-xl p-3.5 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20   transition-all duration-300"
                                     />
                                     <FiLink className="absolute left-3.5 top-1/2 -translate-y-1/2 text-(--color-gray-500)" />
                                 </div>
@@ -182,8 +179,8 @@ export const Forms = () => {
                                         id="description"
                                         rows="4"
                                         placeholder="Briefly describe how you plan to use our solutions..."
-                                        className="w-full bg-(--bg-primary) border border-(--guide-color) p-3 pl-10 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all duration-200 resize-none"
-                                    ></textarea>
+                                        className=" w-full bg-(--bg-primary) border border-(--guide-color) rounded-xl p-3.5 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300">  
+                              </textarea>
                                     <FiFileText className="absolute left-3.5 top-4 text-(--color-gray-500)" />
                                 </div>
                             </div>
@@ -193,12 +190,12 @@ export const Forms = () => {
                                 <button 
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className={`
-                                        w-full md:w-auto group flex items-center justify-center gap-2 bg-white text-black px-8 py-3 text-sm font-medium 
-                                        transition-all duration-200
-                                        ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-(--color-gray-200) cursor-pointer'}
-                                    `}
-                                >
+                                    className={` w-full md:w-auto group flex items-center  justify-center gap-3 rounded-full border border-white/20 bg-white px-8 py-3.5 text-sm font-semibold text-black transition-all duration-300
+                                     ${isSubmitting
+                                     ? 'opacity-70 cursor-not-allowed'
+                                     : 'hover:bg-transparent hover:text-white hover:border-white hover:scale-105 cursor-pointer'
+                                     }
+                                       `}>
                                     {isSubmitting ? (
                                         <>
                                             <FiLoader className="animate-spin" /> Submitting...

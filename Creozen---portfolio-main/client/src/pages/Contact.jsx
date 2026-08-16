@@ -39,7 +39,19 @@ const FAQItem = ({ question, answer }) => {
         <div className="border-b border-(--guide-color)">
             <button 
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full py-6 flex items-center justify-between text-left group cursor-pointer"
+                className="
+    w-full
+    py-6
+    flex
+    items-center
+    justify-between
+    text-left
+    group
+    cursor-pointer
+    transition-all
+    duration-300
+    hover:px-3
+"
             >
                 <span className={`text-base font-medium transition-colors ${isOpen ? 'text-white' : 'text-(--color-gray-400) group-hover:text-white'}`}>
                     {question}
@@ -102,7 +114,7 @@ export const Contact = () => {
     };
 
     return (
-        <section className="animate-in fade-in duration-700 bg-(--bg-primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color)">
+        <section className="animate-in fade-in duration-700 bg-(--bg-primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color) rounded-3xl overflow-hidden">
             
             <SEO 
                 title="Contact Us - AI Consultancy & Support | Creozen"
@@ -118,9 +130,10 @@ export const Contact = () => {
                 </div>
 
                 <div className="relative z-10 max-w-2xl mx-auto">
-                    <h5 className="text-blue-400 font-medium tracking-wide text-sm uppercase mb-4 inline-flex items-center gap-2 border border-blue-500/20 bg-blue-500/10 px-3 py-1 rounded-full">
-                        <BsStars /> Get in touch
-                    </h5>
+                    <h5 className="text-(--color-gray-300) font-medium tracking-wide text-sm uppercase mb-4 inline-flex items-center gap-2 border border-(--guide-color) bg-(--color-black-900) px-4 py-2 rounded-full">
+                     <BsStars />
+                      Get in touch
+                     </h5>
                     <h1 className="text-4xl md:text-6xl font-semibold tracking-tighter text-white mb-6">
                         Contact Us
                     </h1>
@@ -147,7 +160,24 @@ export const Contact = () => {
                                 type="text" 
                                 id="name"
                                 placeholder="John Doe"
-                                className="w-full bg-black border border-(--guide-color) p-3 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all duration-200"
+                                className="
+    w-full
+    rounded-xl
+    bg-black
+    border
+    border-(--guide-color)
+    px-4
+    py-3
+    text-sm
+    text-white
+    placeholder:text-(--color-gray-600)
+    outline-none
+    transition-all
+    duration-300
+    focus:border-white-500
+    focus:ring-2
+    focus:ring-white-500/20
+"
                             />
                         </div>
 
@@ -160,7 +190,24 @@ export const Contact = () => {
                                 type="email" 
                                 id="email"
                                 placeholder="john@company.com"
-                                className="w-full bg-black border border-(--guide-color) p-3 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all duration-200"
+                                className="
+    w-full
+    rounded-xl
+    bg-black
+    border
+    border-(--guide-color)
+    px-4
+    py-3
+    text-sm
+    text-white
+    placeholder:text-(--color-gray-600)
+    outline-none
+    transition-all
+    duration-300
+    focus:border-white-500
+    focus:ring-2
+    focus:ring-white-500/20
+"
                             />
                         </div>
 
@@ -173,32 +220,52 @@ export const Contact = () => {
                                 id="message"
                                 rows="5"
                                 placeholder="Tell us about your project..."
-                                className="w-full bg-black border border-(--guide-color) p-3 text-sm text-white placeholder:text-(--color-gray-600) focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all duration-200 resize-none"
+                                className="
+    w-full
+    rounded-xl
+    bg-black
+    border
+    border-(--guide-color)
+    px-4
+    py-3
+    text-sm
+    text-white
+    placeholder:text-(--color-gray-600)
+    outline-none
+    transition-all
+    duration-300
+    focus:border-white-500
+    focus:ring-2
+    focus:ring-white-500/20
+    resize-none
+"
                             ></textarea>
                         </div>
 
                         {/* Submit Button */}
                         <div className="pt-2">
-                            <button 
-                                type="submit"
-                                disabled={isSubmitting} // Disable while sending
-                                className={`
-                                    group flex items-center gap-2 bg-white text-black px-6 py-3 text-sm font-medium 
-                                    transition-all duration-200 
-                                    ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-(--color-gray-200) cursor-pointer'}
-                                `}
-                            >
-                                {isSubmitting ? (
-                                    <>
-                                        <FiLoader className="animate-spin" /> Sending...
-                                    </>
-                                ) : (
-                                    <>
-                                        Send Message 
-                                        <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
-                                    </>
-                                )}
-                            </button>
+                            <button
+    type="submit"
+    disabled={isSubmitting}
+    className={`group flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-black text-sm font-semibold border border-white transition-all duration-300
+    ${
+        isSubmitting
+            ? 'opacity-60 cursor-not-allowed'
+            : 'hover:bg-black hover:text-white hover:translate-x-1 cursor-pointer'
+    }`}
+>
+    {isSubmitting ? (
+        <>
+            <FiLoader className="animate-spin" />
+            Sending...
+        </>
+    ) : (
+        <>
+            Send Message
+            <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
+        </>
+    )}
+</button>
                         </div>
                     </form>
                 </div>
@@ -216,7 +283,7 @@ export const Contact = () => {
                     <div className="flex-1 divide-y divide-(--guide-color)">
                         
                         {/* Email Block */}
-                        <div className="p-8 hover:bg-(--color-black-900) transition-colors group">
+                         <div className="p-8 hover:bg-(--color-black-900) transition-colors group">
                             <div className="flex items-center gap-3 mb-3 text-(--color-gray-400) group-hover:text-white transition-colors">
                                 <FiMail className="text-xl" />
                                 <span className="text-xs font-mono uppercase tracking-wider">Email</span>
@@ -259,7 +326,7 @@ export const Contact = () => {
 
                          {/* Support Block */}
                         <div className="p-8 bg-(--bg-primary) flex-1">
-                            <div className="border border-dashed border-(--guide-color) rounded p-4 text-center">
+                            <div className="border border-(--guide-color) rounded-2xl p-5 text-center bg-black">
                                 <FiMessageSquare className="mx-auto text-(--color-gray-600) mb-2" />
                                 <p className="text-xs text-(--color-gray-500)">
                                     We'd love to hear from you. <br />

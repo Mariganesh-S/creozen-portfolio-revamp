@@ -419,7 +419,7 @@ export const PaidWorkshop = () => {
 
     if (isSuccess) {
         return (
-            <section className="animate-in fade-in duration-700 bg-(--bg-primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color) p-6 md:p-12">
+           <section className="animate-in fade-in duration-700 bg-(--bg-primary) max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color) rounded-2xl overflow-hidden">
                 <Helmet>
                     <script>{`fbq('track', 'CompleteRegistration');`}</script>
                 </Helmet>
@@ -435,7 +435,7 @@ export const PaidWorkshop = () => {
                     </p>
 
                     {/* Receipt Details */}
-                    <div className="w-full bg-black border border-(--guide-color) p-6 rounded-lg mb-8 text-left space-y-4">
+                    <div className="w-full inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-xl text-sm font-semibold transition-all justify-center cursor-pointer shadow-lg shadow-green-950/20">
                         <h4 className="text-white font-medium border-b border-(--guide-color) pb-2 text-sm uppercase tracking-wider">Registration Receipt</h4>
                         <div className="grid grid-cols-2 gap-y-2 text-sm">
                             <span className="text-gray-500">Transaction ID:</span>
@@ -488,14 +488,14 @@ export const PaidWorkshop = () => {
             />
 
             {/* --- Hero / Header Section --- */}
-            <div className="relative py-24 px-6 md:px-12 border-b border-(--guide-color) overflow-hidden text-center">
+            <div  className="  relative  py-24  px-6 md:px-12 border-b border-(--guide-color) overflow-hidden text-center rounded-t-2xl">
                 <div className="absolute inset-0 pointer-events-none opacity-[0.03]" 
                      style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
                 </div>
 
                 <div className="relative z-10 max-w-3xl mx-auto">
-                    <h5 className="text-indigo-400 font-medium tracking-wide text-xs uppercase mb-4 inline-flex items-center gap-2 border border-indigo-500/20 bg-indigo-500/10 px-4 py-1.5 rounded-full">
-                        <BsStars /> Live Intensive Training
+                    <h5 className="text-blue-400 font-medium tracking-wide text-xs uppercase mb-4 inline-flex items-center gap-2 border border-blue-500/20 bg-blue-500/10 px-4 py-1.5 rounded-full">
+                      <BsStars /> Live Intensive Training
                     </h5>
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tighter text-white mb-6 leading-tight">
                         AI Masterclass Series
@@ -540,7 +540,7 @@ export const PaidWorkshop = () => {
                             <button
                                 type="button"
                                 onClick={selectAllCourses}
-                                className="inline-flex items-center gap-2 text-xs font-semibold text-indigo-400 hover:text-indigo-300 border border-indigo-500/20 bg-indigo-500/5 hover:bg-indigo-500/10 px-4 py-2 rounded transition-all cursor-pointer self-start md:self-auto"
+                                className="inline-flex items-center gap-2 text-xs font-semibold text-blue-400 hover:text-blue-300 border border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/10 px-5 py-2.5 rounded-xl transition-all duration-300 cursor-pointer"
                             >
                                 Select All 4 Courses
                             </button>
@@ -803,7 +803,7 @@ export const PaidWorkshop = () => {
                         </div>
 
                         {/* Summary & Pricing Column */}
-                        <div className="lg:col-span-5 space-y-6 bg-black/40 border border-(--guide-color) p-6 rounded-lg">
+                        <div className="lg:col-span-5 space-y-6 bg-black/40 border border-(--guide-color) p-6 md:p-7 rounded-2xl">
                             <h3 className="text-lg font-semibold text-white border-b border-(--guide-color) pb-3">
                                 Order Summary
                             </h3>
@@ -886,11 +886,12 @@ export const PaidWorkshop = () => {
                                 type="submit"
                                 form="paid-registration-form"
                                 disabled={isSubmitting}
-                                className={`
-                                    w-full group flex items-center justify-center gap-3 bg-white text-black px-6 py-4 text-sm font-bold rounded
-                                    transition-all duration-200 shadow-lg shadow-white/5
-                                    ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:bg-(--color-gray-200) cursor-pointer'}
-                                `}
+                                className={` w-full group flex items-center justify-center gap-3 bg-white text-black px-6 py-4  text-sm font-bold rounded-xl transition-all duration-300 shadow-lg shadow-white/5
+                                ${isSubmitting
+                                   ? 'opacity-70 cursor-not-allowed'
+                                   : 'hover:bg-blue-50 hover:scale-[1.01] cursor-pointer'
+                                 }
+                               `}
                             >
                                 {isSubmitting ? (
                                     <>

@@ -8,7 +8,7 @@ import { SEO } from '../components/utils/SEO';
 
 export const About = () => {
     return (
-        <section className="animate-in fade-in duration-700 max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color)">
+        <section className="animate-in fade-in duration-700 max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color) rounded-3xl overflow-hidden">
             
             <SEO 
                 title="About Us - AI Engineering & Global R&D"
@@ -17,7 +17,7 @@ export const About = () => {
             />
 
             {/* --- 1. Hero Section --- */}
-            <div className="relative py-20 px-6 md:px-12 border-x border-(--guide-color) overflow-hidden">
+            <div className="relative py-20 px-6 md:px-12 border-x border-(--guide-color) overflow-hidden rounded-t-3xl">
                  {/* Background Gradient Effect (Subtle) */}
                  <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-purple-900/10 via-transparent to-transparent opacity-50 pointer-events-none"></div>
 
@@ -38,7 +38,7 @@ export const About = () => {
             <GridSeparator />
 
             {/* --- 2. Proven Impact Section (E-E-A-T: Authority) --- */}
-            <div className="border-x border-b border-(--guide-color) bg-(--bg-primary)">
+            <div className="border-x border-b border-(--guide-color) bg-(--bg-primary) overflow-hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2">
                     
                     {/* Header Side */}
@@ -80,7 +80,7 @@ export const About = () => {
             <GridSeparator />
 
             {/* --- 3. Engineering Standards (E-E-A-T: Trust & Expertise) --- */}
-            <div className="border-x border-b border-(--guide-color) bg-black p-8 md:p-20">
+            <div className="border-x border-b border-(--guide-color) bg-black p-8 md:p-20 overflow-hidden">
                 <div className="text-center mb-12 max-w-3xl mx-auto">
                     <h2 className="text-3xl font-semibold text-white mb-4">Why Global Enterprises Trust Us</h2>
                     <p className="text-(--color-gray-500)">
@@ -134,7 +134,7 @@ export const About = () => {
             <GridSeparator />
 
             {/* --- 5. Core Focus Areas --- */}
-            <div className="grid grid-cols-1 md:grid-cols-2 border-x border-(--guide-color) divide-y md:divide-y-0 md:divide-x divide-(--guide-color)">
+            <div className="grid grid-cols-1 md:grid-cols-2 border-x border-(--guide-color) divide-y md:divide-y-0 md:divide-x divide-(--guide-color) overflow-hidden">
                 <FocusCard 
                     icon={BsStars}
                     title="Generative AI"
@@ -160,7 +160,7 @@ export const About = () => {
             <GridSeparator />
 
             {/* --- 6. Locations --- */}
-            <div className="border-x border-b border-(--guide-color) grid grid-cols-1 md:grid-cols-2 bg-black">
+            <div className="border-x border-b border-(--guide-color) grid grid-cols-1 md:grid-cols-2 bg-black overflow-hidden rounded-b-3xl">
                 {/* London */}
                 <LocationCard 
                     city="London, UK" 
@@ -195,20 +195,7 @@ const ImpactItem = ({ icon: Icon, number, text }) => (
 );
 
 const WhyCard = ({ icon: Icon, title, desc }) => (
-    <div
-       className="
-        p-6
-        border
-        border-(--guide-color)
-        bg-(--bg-primary)
-        rounded-2xl
-        hover:bg-(--color-black-900)
-        hover:-translate-y-2
-        hover:shadow-xl
-        transition-all
-        duration-300
-     "
->
+    <div className="p-6 border border-(--guide-color) bg-(--bg-primary) rounded-2xl  hover:bg-(--color-black-900) hover:-translate-y-2  hover:shadow-xl transition-all  duration-300">
         <div className="w-10 h-10 bg-[#0a0a0a] border border-(--guide-color) flex items-center justify-center text-white mb-4 rounded-md">
             <Icon size={20} />
         </div>
@@ -220,25 +207,7 @@ const WhyCard = ({ icon: Icon, title, desc }) => (
 );
 
 const PhilosophyCard = ({ icon: Icon, title, desc }) => (
-    <div
-    className="
-        flex
-        flex-col
-        items-center
-        text-center
-        space-y-4
-        p-8
-        rounded-2xl
-        border
-        border-(--guide-color)
-        bg-(--bg-primary)
-        transition-all
-        duration-300
-        hover:-translate-y-2
-        hover:bg-(--color-black-900)
-        hover:shadow-xl
-    "
->
+    <div className=" flex flex-col items-center text-center space-y-4 p-8 rounded-2xl border border-(--guide-color) bg-(--bg-primary) transition-all duration-300 hover:-translate-y-2 hover:bg-(--color-black-900) hover:shadow-xl">
         <div className="w-12 h-12 rounded-full border border-(--guide-color) flex items-center justify-center text-white bg-(--color-black-900)">
             <Icon size={20} />
         </div>
@@ -265,29 +234,7 @@ const FocusCard = ({ icon: Icon, title, desc }) => (
 );
 
 const LocationCard = ({ city, role, align }) => (
-    <div
-    className="
-        relative
-        p-12
-        overflow-hidden
-        group
-        border-b
-        sm:border-b-0
-        sm:first:border-r
-        border-(--guide-color)
-        before:absolute
-        before:top-0
-        before:left-0
-        before:w-0
-        before:h-1
-        before:bg-gradient-to-r
-        before:from-purple-500
-        before:to-blue-500
-        before:transition-all
-        before:duration-300
-        hover:before:w-full
-    "
->
+    <div className=" relative  p-12 overflow-hidden group border-b sm:border-b-0 sm:first:border-r border-(--guide-color) before:absolute before:top-0 before:left-0 before:w-0 before:h-1 before:bg-gradient-to-r before:from-purple-500 before:to-blue-500 before:transition-all before:duration-300 hover:before:w-full">
         <div className={`flex flex-col h-full justify-between ${align === 'right' ? 'md:items-end md:text-right' : 'md:items-start'}`}>
             <div className="mb-8">
                 <div className="flex items-center gap-2 text-(--color-gray-500) mb-2">

@@ -5,22 +5,25 @@ import { Helmet } from 'react-helmet-async';
 
 export const NotFound = () => {
     return (
-        <section className="animate-in fade-in duration-700 max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color) bg-black">
+        <section className="animate-in fade-in duration-700 max-w-(--content-max-width) mx-auto my-12 md:my-20 bg-black rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
             
             <Helmet>
                 <title>404 - Page Not Found | Creozen</title>
                 <meta name="robots" content="noindex, follow" />
             </Helmet>
-
-            {/* Top Separator to frame the section */}
-            <GridSeparator />
-
-            <div className="relative min-h-[60vh] flex flex-col items-center justify-center px-6 overflow-hidden">
+            {/* Top separator removed for a cleaner rounded layout */}
+                
+            <div className="relative min-h-[60vh] flex flex-col items-center justify-center px-6 py-16 overflow-hidden rounded-2xl">
                 
                 {/* Background: Subtle Grid Pattern */}
-                <div className="absolute inset-0 pointer-events-none opacity-[0.03]" 
-                     style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }}>
-                </div>
+                <div
+                 className="absolute inset-0 pointer-events-none opacity-[0.015] rounded-2xl"
+                  style={{
+                    backgroundImage:
+                    'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
+                      backgroundSize: '50px 50px',
+                          }}
+                ></div>
 
                 {/* Background: Glow Effect behind the text */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-white/5 blur-[100px] rounded-full pointer-events-none"></div>

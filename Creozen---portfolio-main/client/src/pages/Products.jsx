@@ -30,11 +30,7 @@ const ProductGridItem = ({ product, index, accentColor }) => {
 
     return (
         <div 
-            className={`
-                ${spanClass} group relative 
-                border-r border-b border-white/10 
-                bg-black h-[400px] overflow-hidden
-            `}
+            className={`${spanClass} group relative border-r border-b border-white/10 bg-black h-[400px] overflow-hidden rounded-2xl m-2 transition-all duration-300 hover:-translate-y-1`}
             onMouseMove={handleMouseMove}
         >
             {/* Spotlight Effect (Restricted to Grid Cell) */}
@@ -59,8 +55,7 @@ const ProductGridItem = ({ product, index, accentColor }) => {
                     <img 
                         src={product.image} 
                         alt={product.title} 
-                        className="w-full h-full object-cover opacity-50 grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105 group-hover:opacity-60"
-                    />
+                        className=" w-full h-full object-cover opacity-50 grayscale transition-all duration-700  group-hover:grayscale-0  group-hover:scale-105  group-hover:opacity-70" />
                     
                     {/* Video on Hover */}
                     {hoverVideo && (
@@ -85,8 +80,7 @@ const ProductGridItem = ({ product, index, accentColor }) => {
                     {/* Icon Badge */}
                     <div className="absolute top-8 left-8">
                         <div className={`
-                            w-10 h-10 flex items-center justify-center 
-                            bg-black/50 border border-white/10 backdrop-blur-md 
+                            w-10 h-10 rounded-xl flex items-center justify-center bg-black/50 border border-white/10 backdrop-blur-md
                             text-xl text-white transition-colors duration-300
                             ${accentColor === 'green' ? 'group-hover:text-green-400 group-hover:border-green-500/30' : 'group-hover:text-blue-400 group-hover:border-blue-500/30'}
                         `}>
@@ -194,7 +188,7 @@ const ResearchSpotlight = ({ research }) => {
 
                         <div className="flex gap-4">
                             <Link to={`/products/${research.id}`}>
-                                <button className="px-8 py-3 bg-white text-black font-medium hover:bg-gray-200 transition-colors cursor-pointer flex items-center gap-2">
+                                <button className=" px-8 py-3  rounded-full  bg-white text-black font-semibold hover:bg-transparent hover:text-white border border-white transition-all duration-300 cursor-pointer flex items-center gap-2">
                                     Explore Research Overview <FiArrowUpRight className="text-lg transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                                 </button>
                             </Link>
@@ -208,7 +202,7 @@ const ResearchSpotlight = ({ research }) => {
 
 export const Products = () => {
     return (
-        <section className="bg-black min-h-screen max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color)">
+        <section className=" bg-black min-h-screen max-w-(--content-max-width) mx-auto my-12 md:my-20 overflow-hidden rounded-3xl border border-(--guide-color)">
             <SEO 
                 title="AI Product Suite: Assessly, Smart Vision & IntraQuest"
                 description="Explore our ecosystem: Smart Vision Analytics for retail/industry and the University Suite (Assessly, SkillSync, AttendEase) for institutional automation."
@@ -222,9 +216,9 @@ export const Products = () => {
 
                 <div className="relative z-10 max-w-4xl">
                     <div className="flex items-center gap-3 mb-6">
-                        <div className="w-10 h-10 border border-(--guide-color) bg-black flex items-center justify-center text-white">
-                            <FiBox />
-                        </div>
+                        <div className=" w-10 h-10 rounded-xl border border-(--guide-color) bg-white/[0.03] flex items-center justify-center text-white">
+                         <FiBox />
+                         </div>
                         <span className="text-sm font-mono text-(--color-gray-500) uppercase tracking-widest">
                             Product Catalogue
                         </span>
@@ -322,12 +316,12 @@ export const Products = () => {
                         </p>
                         <div className="flex justify-center gap-4">
                          <Link to="/forms">
-                            <button className="px-8 py-3 bg-white text-black font-medium hover:bg-gray-200 transition-colors">
+                            <button className=" inline-flex items-center justify-center gap-2 rounded-full  border  border-white  bg-white  px-7 py-3.5 text-sm font-semibold text-black transition-all  duration-300  hover:bg-black  hover:text-white  hover:-translate-y-1  hover:shadow-lg cursor-pointer">
                                 Book a Demo
                             </button>
                         </Link>
                         <Link to="/contact">
-                            <button className="px-8 py-3 border border-white/20 text-white font-medium hover:bg-white/10 transition-colors">
+                            <button className=" inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-transparent px-7 py-3.5 text-sm font-semibold text-white transition-all duration-30  hover:bg-white hover:text-black hover:border-white hover:-translate-y-1 cursor-pointer">
                                 Contact Sales
                             </button>
                         </Link>

@@ -44,13 +44,13 @@ export const Hero = () => {
                     <div
                         key={i}
                         className="
-                          border border-(--guide-color)
-                           aspect-square
-                           transition-all
+                         border border-(--guide-color)
+                          aspect-square
+                          transition-all
                            duration-500
-                           hover:bg-purple-500/10
-                           hover:border-purple-500
-                            "
+                           hover:bg-white/[0.03]
+                           hover:border-white/20
+                        "
                     ></div>
                 ))}
 
@@ -81,7 +81,7 @@ export const Hero = () => {
             </div>
 
             {/* --- Bottom Section: Partnership (E-E-A-T Trust Signal) --- */}
-            <div className="border-x border-b-none border-(--guide-color) min-h-[160px] md:min-h-56 flex items-center justify-center px-4 md:px-6 py-8 md:py-0 bg-(--bg-primary)">
+            <div  className="border border-(--guide-color) rounded-2xl min-h-[160px] md:min-h-56 flex items-center justify-center px-4 md:px-6 py-8 md:py-0 bg-(--bg-primary)">
                 <div className="flex flex-col md:flex-row items-center gap-3 md:gap-5">
                     <span className="text-lg md:text-2xl text-(--color-gray-500) font-medium text-center md:text-left">
                         In partnership with
@@ -93,7 +93,7 @@ export const Hero = () => {
                             src={nvidia} 
                             alt="Official Technology Partner: NVIDIA Inception Program" 
                             title="Official Technology Partner: NVIDIA Inception Program"
-                            className="h-10 transition-aller:opacity-100"
+                            className="h-10 opacity-70 hover:opacity-100 transition-opacity duration-300"
                             style={{opacity: 0.7}}
                         />
                     </div>

@@ -67,7 +67,7 @@ export const ProductDetails = () => {
     const hasMultipleImages = product.gallery && product.gallery.length > 1;
 
     return (
-        <section className="animate-in fade-in duration-700 bg-black min-h-screen max-w-(--content-max-width) mx-auto my-12 md:my-20 border border-(--guide-color)">
+     <section className=" animate-in fade-in duration-700 bg-blac min-h-screen max-w-(--content-max-width) mx-auto my-12 md:my-20 overflow-hidden rounded-3xl border border-(--guide-color)">
             
             <SEO 
                 title={`${product.title} - ${product.subtitle}`}
@@ -76,7 +76,7 @@ export const ProductDetails = () => {
             />
 
             {/* --- Hero Section --- */}
-            <div className="relative pt-32 pb-16 px-6 md:px-12 border-x border-(--guide-color)">
+            <div  className="relative pt-24 md:pt-32 pb-16 px-6 md:px-12 border-b border-(--guide-color)">
                 
                 <Link to="/products" className="inline-flex items-center gap-2 text-(--color-gray-500) hover:text-white mb-8 transition-colors">
                     <FiArrowLeft /> Back to Products
@@ -86,7 +86,7 @@ export const ProductDetails = () => {
                     
                     {/* Left: Text Content */}
                     <div className="flex flex-col justify-center">
-                        <div className={`inline-block px-3 py-1 mb-4 border ${product.isResearch ? 'border-purple-500/30 bg-purple-500/10 text-purple-400' : 'border-blue-500/30 bg-blue-500/10 text-blue-400'} text-xs font-mono uppercase tracking-widest w-fit`}>
+                        <div className="inline-flex items-center px-3 py-1.5 mb-4 rounded-full border border-white/15 bg-white/[0.03] text-white/70 text-xs  font-mono  uppercase  tracking-widest  w-fit">
                             {product.isResearch ? "Research Initiative Overview" : "Product Overview"}
                         </div>
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -107,12 +107,12 @@ export const ProductDetails = () => {
                         {!product.isResearch && (
                             <div className="flex gap-4">
                                 <Link to="/forms">
-                                    <button className="px-6 sm:px-2 py-3 bg-white text-black font-medium hover:bg-gray-200 transition-colors cursor-pointer">
+                                    <button className="inline-flex items-center justify-center rounded-full border border-white bg-white px-6 py-3 text-sm font-semibold text-black transition-allduration-300 hover:bg-transparent hover:text-white hover:-translate-y-0.5 cursor-pointer">
                                         Book a Demo
                                     </button>
                                 </Link>
                                 <Link to="/contact">
-                                    <button className="px-6 sm:px-2 py-3 border border-white/20 text-white font-medium hover:bg-white/10 transition-colors cursor-pointer">
+                                    <button className="inline-flex items-center justify-center rounded-full border border-white bg-white px-6 py-3 text-sm font-semibold text-black transition-all duration-300 hover:bg-transparent hover:text-white hover:-translate-y-0.5 cursor-pointer">
                                         Contact Sales
                                     </button>
                                 </Link>
@@ -132,12 +132,11 @@ export const ProductDetails = () => {
                                 <video 
                                     key={activeMedia.src} 
                                     src={activeMedia.src} 
-                                    className="w-full h-full object-cover"
+                                    className=" w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                                     autoPlay 
                                     muted 
                                     loop 
-                                    playsInline
-                                />
+                                    playsInline />
                             ) : (
                                 <img 
                                     src={activeMedia.src} 
